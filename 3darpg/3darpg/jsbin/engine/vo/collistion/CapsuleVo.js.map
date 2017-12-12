@@ -1,1 +1,0 @@
-{"version":3,"file":"CapsuleVo.js","sourceRoot":"","sources":["../../../../engine/vo/collistion/CapsuleVo.ts"],"names":[],"mappings":"AAAA;IAGI,mBAAmB,OAAe,EAAE,OAAe;QAC/C,IAAI,CAAC,MAAM,GAAG,OAAO,CAAC;QACtB,IAAI,CAAC,MAAM,GAAG,OAAO,CAAC;IAC1B,CAAC;IACL,gBAAC;AAAD,CAAC,AAPD,IAOC"}

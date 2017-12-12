@@ -1,0 +1,6 @@
+F:\slefSvn\trunk\arpggame\3darpgJz\3darpgJz\bin\3darpgJz.dll.config
+F:\slefSvn\trunk\arpggame\3darpgJz\3darpgJz\bin\3darpgJz.dll
+F:\slefSvn\trunk\arpggame\3darpgJz\3darpgJz\bin\3darpgJz.pdb
+F:\slefSvn\trunk\arpggame\3darpgJz\3darpgJz\obj\Debug\3darpgJz.csproj.CoreCompileInputs.cache
+F:\slefSvn\trunk\arpggame\3darpgJz\3darpgJz\obj\Debug\3darpgJz.dll
+F:\slefSvn\trunk\arpggame\3darpgJz\3darpgJz\obj\Debug\3darpgJz.pdb
