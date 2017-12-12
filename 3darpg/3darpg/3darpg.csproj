@@ -23,7 +23,6 @@
     <Content Include="bins\h5web.zip.js" />
     <Content Include="bins\inflate.min.js" />
     <Content Include="index.html" />
-    <Content Include="index1.html" />
     <Content Include="libs\base64.js" />
     <Content Include="libs\md5.js" />
     <Content Include="libs\patrol\astar.js" />

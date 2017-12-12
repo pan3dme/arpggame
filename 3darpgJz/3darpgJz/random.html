@@ -1,0 +1,64 @@
+﻿<html>
+<head>
+    <title>index</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta content="IE=11.00" http-equiv="X-UA-Compatible" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=0.5, maximum-scale=0.5">
+
+    <link rel="apple-touch-icon-precomposed" href="icon.png" />
+    <link rel="touch-icon-precomposed" href="icon.png" />
+
+    <style>
+        canvas {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+    </style>
+
+    <script>
+
+
+        function init() {
+
+
+            var $nameKey = localStorage.getItem("nameKey3");
+            if (!$nameKey) {
+                var $arr = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "K", "U", "V"]
+                $nameKey = $arr[Math.floor(Math.random() * ($arr.length - 1))]
+                $nameKey += $arr[Math.floor(Math.random() * ($arr.length - 1))]
+                localStorage.setItem("nameKey3", $nameKey);
+                localStorage.setItem("randomid", 10000);
+            }
+
+            var $randomid = localStorage.getItem("randomid");
+            if (!$randomid) {
+                $randomid = 10000;
+            }
+            $randomid = $randomid%10000
+            $randomid = Number($randomid) + 1;
+            localStorage.setItem("randomid", $randomid);
+
+            var $tempName = $nameKey + $randomid;
+
+            localStorage.setItem("name", $tempName);
+
+            sessionStorage.setItem("name", $tempName);
+
+            sessionStorage.setItem("randomname", $tempName);
+
+            window.location.href = "index.html";
+
+           
+        }
+
+    </script>
+</head>
+<body onload="init()" style="overflow-x: hidden; overflow-y: hidden">
+
+</body>
+</html>
+

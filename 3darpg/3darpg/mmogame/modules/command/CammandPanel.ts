@@ -121,8 +121,7 @@
                 //"完成斗剑台",
                 //"测试粒子",
                 "回到主城",
-                "去1007",
-                "去1008",
+                "去1006",
                 "家族活动",
                 /**
                 "全民boss",
@@ -185,10 +184,7 @@
                     NetManager.getInstance().protocolos.teleport_map(1, 1);
                     // NetManager.getInstance().protocolos.challange_boss();
                     break;
-                case "去1007":
-                    NetManager.getInstance().protocolos.teleport_map(1007, 1);
-                    break;
-                case "去1008":
+                case "去1006":
                     NetManager.getInstance().protocolos.teleport_map(1008, 1);
                     break;
                 case "招募成员":
@@ -336,7 +332,7 @@
                     */
                     // break;
                 case "显示A星":
-                    //ModuleEventManager.dispatchEvent(new Camand.ComandEvent(Camand.ComandEvent.SHOW_ASTAR_LINE));
+                    //  ModuleEventManager.dispatchEvent(new Camand.ComandEvent(Camand.ComandEvent.SHOW_ASTAR_LINE));
                     scene2d.SceneAstarModel.getInstance().showAstarLine();
                     break;
                 case "完成主线":

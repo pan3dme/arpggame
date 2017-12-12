@@ -1,0 +1,589 @@
+{
+    "aaa": [
+		[
+			
+				{
+                "id": 1,
+                "name": "九天梦游",
+                "state": 1,
+                "isnew": true,
+				"curvo":false,
+                "role": null
+                
+            },
+			{
+                "id": 2,
+                "name": "及其董事",
+                "state": 2,
+                "isnew": true,
+				"curvo":false,
+                "role": 
+                   {
+                        "roleid": 123,
+                        "rolename": "hdsao",
+                        "rolelev": 100,
+                        "roletype": 1
+                    }
+                
+            },
+			{
+                "id": 3,
+                "name": "年后的撒",
+                "state": 3,
+                "isnew": false,
+				"curvo":false,
+                "role": 
+                    null
+                
+            }
+			
+		],
+		[
+			{
+                "id": 6,
+                "name": "囧下啊看",
+                "state": 2,
+                "isnew": false,
+				"curvo":false,
+                "role": 
+                    null
+                
+            },
+			{
+                "id": 5,
+                "name": "系哦啊什",
+                "state": 3,
+                "isnew": false,
+				"curvo":false,
+                "role": null 
+                
+            },
+			{
+                "id": 4,
+                "name": "就怕辛苦",
+                "state": 0,
+                "isnew": true,
+				"curvo":false,
+                "role": 
+                    null
+                
+            }
+		],
+		[
+			{
+                "id": 7,
+                "name": "囧下啊看",
+                "state": 2,
+                "isnew": false,
+				"curvo":false,
+                "role": 
+                    null
+                
+            },
+			{
+                "id": 8,
+                "name": "系哦啊什",
+                "state": 3,
+                "isnew": false,
+				"curvo":false,
+                "role": null 
+                
+            },
+			{
+                "id": 9,
+                "name": "就怕辛苦",
+                "state": 0,
+                "isnew": true,
+				"curvo":false,
+                "role": 
+                    null
+                
+            }
+		],[
+			{
+                "id": 10,
+                "name": "囧下啊看",
+                "state": 2,
+                "isnew": false,
+				"curvo":false,
+                "role": 
+                    null
+                
+            },
+			{
+                "id": 11,
+                "name": "系哦啊什",
+                "state": 3,
+                "isnew": false,
+				"curvo":false,
+                "role": null 
+                
+            },
+			{
+                "id": 12,
+                "name": "就怕辛苦",
+                "state": 0,
+                "isnew": true,
+				"curvo":false,
+                "role": 
+                    null
+                
+            }
+		],
+		[
+			{
+                "id": 13,
+                "name": "囧下啊看",
+                "state": 2,
+                "isnew": false,
+				"curvo":false,
+                "role": 
+                    null
+                
+            },
+			{
+                "id": 14,
+                "name": "系哦啊什",
+                "state": 3,
+                "isnew": false,
+				"curvo":false,
+                "role": null 
+                
+            },
+			{
+                "id": 15,
+                "name": "就怕辛苦",
+                "state": 0,
+                "isnew": true,
+				"curvo":false,
+                "role": 
+                    null
+                
+            }
+		],
+		[
+			{
+                "id": 16,
+                "name": "囧下啊看",
+                "state": 2,
+                "isnew": false,
+				"curvo":false,
+                "role": 
+                    null
+                
+            },
+			{
+                "id": 17,
+                "name": "系哦啊什",
+                "state": 3,
+                "isnew": false,
+				"curvo":false,
+                "role": null 
+                
+            },
+			{
+                "id": 18,
+                "name": "就怕辛苦",
+                "state": 0,
+                "isnew": true,
+				"curvo":false,
+                "role": 
+                    null
+                
+            }
+		],
+		[
+			{
+                "id": 19,
+                "name": "囧下啊看",
+                "state": 2,
+                "isnew": false,
+				"curvo":false,
+                "role": 
+                    null
+                
+            },
+			{
+                "id": 20,
+                "name": "系哦啊什",
+                "state": 3,
+                "isnew": false,
+				"curvo":false,
+                "role": null 
+                
+            },
+			{
+                "id": 21,
+                "name": "就怕辛苦",
+                "state": 0,
+                "isnew": true,
+				"curvo":false,
+                "role": 
+                    null
+                
+            }
+		],
+		[
+			{
+                "id": 22,
+                "name": "囧下啊看",
+                "state": 2,
+                "isnew": false,
+				"curvo":false,
+                "role": 
+                    null
+                
+            },
+			{
+                "id": 23,
+                "name": "系哦啊什",
+                "state": 3,
+                "isnew": false,
+				"curvo":false,
+                "role": null 
+                
+            },
+			{
+                "id": 24,
+                "name": "就怕辛苦",
+                "state": 0,
+                "isnew": true,
+				"curvo":false,
+                "role": 
+                    null
+                
+            }
+		],
+		[
+			{
+                "id": 25,
+                "name": "囧下啊看",
+                "state": 2,
+                "isnew": false,
+				"curvo":false,
+                "role": 
+                    null
+                
+            },
+			{
+                "id": 26,
+                "name": "系哦啊什",
+                "state": 3,
+                "isnew": false,
+				"curvo":false,
+                "role": null 
+                
+            },
+			{
+                "id": 27,
+                "name": "就怕辛苦",
+                "state": 0,
+                "isnew": true,
+				"curvo":false,
+                "role": 
+                    null
+                
+            }
+		],
+		[
+			{
+                "id": 28,
+                "name": "囧下啊看",
+                "state": 2,
+                "isnew": false,
+				"curvo":false,
+                "role": 
+                    null
+                
+            },
+			{
+                "id": 29,
+                "name": "系哦啊什",
+                "state": 3,
+                "isnew": false,
+				"curvo":false,
+                "role": null 
+                
+            },
+			{
+                "id": 30,
+                "name": "就怕辛苦",
+                "state": 0,
+                "isnew": true,
+				"curvo":true,
+                "role": 
+                    {
+                        "roleid": 123,
+                        "rolename": "hdsao",
+                        "rolelev": 100,
+                        "roletype": 1
+                    }
+                
+            }
+		],
+		[
+			{
+                "id": 31,
+                "name": "囧下啊看",
+                "state": 2,
+                "isnew": false,
+				"curvo":false,
+                "role": 
+                    null
+                
+            },
+			{
+                "id": 32,
+                "name": "系哦啊什",
+                "state": 3,
+                "isnew": false,
+				"curvo":false,
+                "role": null 
+                
+            },
+			{
+                "id": 33,
+                "name": "就怕辛苦",
+                "state": 0,
+                "isnew": true,
+				"curvo":false,
+                "role": 
+                    null
+                
+            }
+		],
+		[
+			{
+                "id": 34,
+                "name": "囧下啊看",
+                "state": 2,
+                "isnew": false,
+				"curvo":false,
+                "role": 
+                    null
+                
+            },
+			{
+                "id": 35,
+                "name": "系哦啊什",
+                "state": 3,
+                "isnew": false,
+				"curvo":false,
+                "role": null 
+                
+            },
+			{
+                "id": 36,
+                "name": "就怕辛苦",
+                "state": 0,
+                "isnew": true,
+				"curvo":false,
+                "role": 
+                    null
+                
+            }
+		],
+		[
+			{
+                "id": 37,
+                "name": "囧下啊看",
+                "state": 2,
+                "isnew": false,
+				"curvo":false,
+                "role": 
+                    null
+                
+            },
+			{
+                "id": 38,
+                "name": "系哦啊什",
+                "state": 3,
+                "isnew": false,
+				"curvo":false,
+                "role": null 
+                
+            },
+			{
+                "id": 39,
+                "name": "就怕辛苦",
+                "state": 0,
+                "isnew": true,
+				"curvo":false,
+                "role": 
+                    null
+                
+            }
+		],
+		[
+			{
+                "id": 40,
+                "name": "囧下啊看",
+                "state": 2,
+                "isnew": false,
+				"curvo":false,
+                "role": 
+                    null
+                
+            },
+			{
+                "id": 41,
+                "name": "系哦啊什",
+                "state": 3,
+                "isnew": false,
+				"curvo":false,
+                "role": null 
+                
+            },
+			{
+                "id": 42,
+                "name": "就怕辛苦",
+                "state": 0,
+                "isnew": true,
+				"curvo":false,
+                "role": 
+                    null
+                
+            },
+			{
+                "id": 43,
+                "name": "就怕辛苦",
+                "state": 0,
+                "isnew": true,
+				"curvo":false,
+                "role": 
+                    null
+                
+            },
+			{
+                "id": 44,
+                "name": "就怕辛苦",
+                "state": 0,
+                "isnew": true,
+				"curvo":false,
+                "role": 
+                    null
+                
+            },
+			{
+                "id": 45,
+                "name": "就怕辛苦",
+                "state": 0,
+                "isnew": true,
+				"curvo":false,
+                "role": 
+                    null
+                
+            },
+			{
+                "id": 46,
+                "name": "就怕辛苦",
+                "state": 0,
+                "isnew": true,
+				"curvo":false,
+                "role": 
+                    null
+                
+            },
+			{
+                "id": 47,
+                "name": "就怕辛苦",
+                "state": 0,
+                "isnew": true,
+				"curvo":false,
+                "role": 
+                    null
+                
+            },
+			{
+                "id": 48,
+                "name": "就怕辛苦",
+                "state": 0,
+                "isnew": true,
+				"curvo":false,
+                "role": 
+                    null
+                
+            },
+			{
+                "id": 49,
+                "name": "就怕辛苦",
+                "state": 0,
+                "isnew": true,
+				"curvo":false,
+                "role": 
+                    null
+                
+            },
+			{
+                "id": 50,
+                "name": "就怕辛苦",
+                "state": 0,
+                "isnew": true,
+				"curvo":false,
+                "role": 
+                    null
+                
+            },
+			{
+                "id": 51,
+                "name": "就怕辛苦",
+                "state": 0,
+                "isnew": true,
+				"curvo":false,
+                "role": 
+                    null
+                
+            },
+			{
+                "id": 52,
+                "name": "就怕辛苦",
+                "state": 0,
+                "isnew": true,
+				"curvo":false,
+                "role": 
+                    null
+                
+            },
+			{
+                "id": 53,
+                "name": "就怕辛苦",
+                "state": 0,
+                "isnew": true,
+				"curvo":false,
+                "role": 
+                    null
+                
+            },
+			{
+                "id": 54,
+                "name": "就怕辛苦",
+                "state": 0,
+                "isnew": true,
+				"curvo":false,
+                "role": 
+                    null
+                
+            },
+			{
+                "id": 55,
+                "name": "就怕辛苦",
+                "state": 0,
+                "isnew": true,
+				"curvo":false,
+                "role": 
+                    null
+                
+            },
+			{
+                "id": 56,
+                "name": "就怕辛苦",
+                "state": 0,
+                "isnew": true,
+				"curvo":false,
+                "role": 
+                    null
+                
+            }
+		]
+    ]
+}

@@ -18,6 +18,19 @@ var Arpg2dGameManeger = /** @class */ (function (_super) {
         this.clearStaticScene();
         this.ready = false;
         var $mapid1007 = GuidData.map.tbMapVo.id;
+        if ($mapid1007 == 1001) {
+            if (GuidData.player.getLevel() < 100) {
+                GameControlManager.sendGmCom("@Rank " + String(100));
+            }
+            TimeUtil.addTimeOut(2000, function () {
+                NetManager.getInstance().protocolos.teleport_map(1007, 1);
+            });
+            TimeUtil.addTimeOut(3000, function () {
+                var $indexUrl = window.location.toString();
+                window.location.href = $indexUrl;
+            });
+            return;
+        }
         LoadManager.getInstance().load(Scene_data.fileRoot + get2dMapdataById($mapid1007), LoadManager.XML_TYPE, function ($dtstr) {
             scene2d.MapConfig.getInstance().anlyData($dtstr);
             AstarUtil.makeStarGraph(scene2d.MapConfig.getInstance().astarItem);

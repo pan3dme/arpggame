@@ -882,70 +882,10 @@
     <script src="jsbin/arpg2dsrc/Arpg2dGameStart.js"></script>
 
 
-    
-
-
+ 
 
 
     <script>
-        function gameLoad() {
-            var xhr = new XMLHttpRequest();
-
-
-            xhr.open("GET", "bins/h5web.min.js", true);
-            xhr.responseType = "text";
-
-            showLoadInfo("开始读取主程序...请稍后")
-
-            xhr.onreadystatechange = function () {
-                if (xhr.status == 200 && xhr.readyState == 4) {
-                    includeJS(201, xhr.response);
-                    init();
-                }
-            }
-
-            xhr.onprogress = function (e) {
-                var num = (e.loaded / e.total) * 100 | 0
-                showLoadInfo("主程序读取" + num + "%");
-            }
-
-
-            xhr.send();
-
-        }
-
-        function showLoadInfo(str) {
-            var loadCav = document.getElementById('LoadCanvas');
-            var ctx = loadCav.getContext("2d");
-            ctx.clearRect(0, 0, loadCav.width, loadCav.height);
-            ctx.font = "40px Helvetica";
-            ctx.fillStyle = "#ffffff";
-            ctx.textBaseline = "top";
-            ctx.textAlign = "left";
-            ctx.fillText(str, 0, 0);
-        }
-
-        function removeLoadInfo() {
-
-        }
-
-        function includeJS(sId, source) {
-            if ((source != null) && (!document.getElementById(sId))) {
-                var myHead = document.getElementsByTagName("HEAD").item(0);
-                var myScript = document.createElement("script");
-                myScript.language = "javascript";
-                myScript.type = "text/javascript";
-                myScript.id = sId;
-                try {
-                    myScript.appendChild(document.createTextNode(source));
-                }
-                catch (ex) {
-                    myScript.text = source;
-                }
-                myHead.appendChild(myScript);
-            }
-
-        }
 
 
 
@@ -956,8 +896,7 @@
             Scene_data.fileRoot = " http://" + document.domain + "/arpg/res/";
             GameStart.outNet = false;
             hasInit = true;
-            //document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);  //如果不想让页面滑动，可以加上这段代码
-
+ 
             Engine.init(document.getElementById('ArpgStageCanvas'));
             Scene_data.user = 0;
             FpsStage.getInstance().init(document.getElementById('FpsTipsCanvas'), document.getElementById('LoadCanvas'));
@@ -967,7 +906,6 @@
 
             resetSize();
             addEvents();
-
 
             window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
             if (requestAnimationFrame) {
@@ -1005,13 +943,7 @@
         window.onbeforeunload = function (e) {
             Engine.unload();
         }
-        // window.onerror =
-        // function(errorMessage, scriptURI, lineNumber) {
-        //     alert(errorMessage + "-" + scriptURI + "-" + lineNumber);
-        //     };
-
-      //  <body onload='init()' onresize="resetSize()" ontouchmove="event.preventDefault()" style="overflow-x: hidden; overflow-y: hidden;background-color:#000000">
-    </script>
+       </script>
 </head>
 
 <body onload='init()' onresize="resetSize()" ontouchmove="event.preventDefault()" style="overflow-x: hidden; overflow-y: hidden;background-color:#000000">

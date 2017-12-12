@@ -14,16 +14,32 @@ var Arpg2dGameStart = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     Arpg2dGameStart.prototype.init = function () {
-        var _this = this;
         _super.prototype.init.call(this);
         var $show = true;
         if ($show) {
+            this.configNetRoot();
             scene2d.Engine2d.init(); //初始2D引擎
             SceneManager._instance = new Arpg2dGameManeger(); //更换场景管理
             Arpg2dAstarUtil.getInstance().initAstarFun();
+            quest.QuestModel.getInstance().meshQuestTargets = this.meshQuestTargets;
             Scene_data.cam3D.update = this.cam3Dupdate;
-            document.addEventListener(MouseType.KeyDown, function ($evt) { _this.onKeyDown($evt); });
+            msgtip.GuideModel.getInstance().hideGuidePop();
             this.traceLog();
+        }
+    };
+    Arpg2dGameStart.prototype.configNetRoot = function () {
+        if (document.domain.search("h5abc") != -1 || document.domain.search("h5key") != -1) {
+            localStorage.setItem("sid", "1001");
+            localStorage.setItem("ipurl", "123.56.3.241");
+            localStorage.setItem("platformid", "5");
+        }
+    };
+    Arpg2dGameStart.prototype.meshQuestTargets = function ($taskVo, $temp) {
+        if (GuidData.map.tbMapVo.id == 1007) {
+            NetManager.getInstance().protocolos.teleport_map(1008, 1);
+        }
+        else {
+            NetManager.getInstance().protocolos.teleport_map(1007, 1);
         }
     };
     Arpg2dGameStart.prototype.traceLog = function () {
@@ -35,10 +51,7 @@ var Arpg2dGameStart = /** @class */ (function (_super) {
         }
         console.log($outStr);
     };
-    Arpg2dGameStart.prototype.onKeyDown = function ($evt) {
-    };
     Arpg2dGameStart.prototype.cam3Dupdate = function () {
-        // scene2d.AppDataArpg.resetSelfPosCenter();
     };
     return Arpg2dGameStart;
 }(GameStart));
