@@ -1,0 +1,4 @@
+﻿class RoleResLow extends RoleRes {
+    
+
+}

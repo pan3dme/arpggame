@@ -1,0 +1,143 @@
+﻿<html>
+
+<head>
+    <title>index</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta content="IE=11.00" http-equiv="X-UA-Compatible" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=0.5, maximum-scale=0.5">
+
+    <link rel="apple-touch-icon-precomposed" href="icon.png" />
+    <link rel="touch-icon-precomposed" href="icon.png" />
+
+    <style>
+        canvas {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+    </style>
+    <script>
+        function enter() {
+
+            sessionStorage.clear();
+            //localStorage.clear();
+
+            var obj = new Object;
+            obj.name = document.getElementById("txt").value;
+            obj.sid = document.getElementById("sidtxt").value;
+            obj.ipurl = document.getElementById("iptxt").value;
+            obj.platformid = document.getElementById("platformtxt").value;
+            objStr = JSON.stringify(obj);
+            /*
+            localStorage.setItem("name", document.getElementById("txt").value);
+            localStorage.setItem("sid", document.getElementById("sidtxt").value);
+
+            localStorage.setItem("ipurl", document.getElementById("iptxt").value);
+            localStorage.setItem("platformid", document.getElementById("platformtxt").value);
+
+            sessionStorage.setItem("name", document.getElementById("txt").value);
+            sessionStorage.setItem("sid", document.getElementById("sidtxt").value);
+            */
+            var $indexUrl = window.location.toString();
+            var key = getKeyUrl($indexUrl);
+            localStorage.setItem(key,objStr);
+            sessionStorage.setItem(key,objStr);
+            
+            window.location.href = $indexUrl.replace("login.html", "index.html");
+
+
+        }
+
+        function getKeyUrl($str) {
+
+            var idx = $str.lastIndexOf("/");
+            var r = $str.slice(0, idx);
+            return r;
+
+        }
+
+        function init() {
+
+            document.getElementById("txt").style.fontSize = 50 + "px";
+            document.getElementById("sidtxt").style.fontSize = 50 + "px";
+
+            document.getElementById("iptxt").style.fontSize = 50 + "px";
+            document.getElementById("platformtxt").style.fontSize = 50 + "px";
+
+            document.getElementById("butenter").style.fontSize = 50 + "px";
+
+            var $indexUrl = window.location.toString();
+            var key = getKeyUrl($indexUrl);
+            var obj;
+            var objStr = localStorage.getItem(key);
+            if (objStr) {
+                obj = JSON.parse(objStr);
+            }
+
+            var isOut = true;
+
+
+            if (obj) {
+                document.getElementById("txt").value = obj.name;
+                document.getElementById("sidtxt").value = obj.sid;
+                document.getElementById("iptxt").value = obj.ipurl;
+                document.getElementById("platformtxt").value = obj.platformid;
+            } else {
+                if(isOut){
+                    setDefaultOutNet();
+                }else{
+                    setDefaultLocalNet();
+                }
+            }
+            /*
+            var b = localStorage.getItem("sid");
+            if (b) {
+                document.getElementById("sidtxt").value = b;
+            } else {
+                document.getElementById("sidtxt").value = 1001;
+            }
+
+            var c = localStorage.getItem("ipurl");
+            if (c) {
+                document.getElementById("iptxt").value = c;
+            } else {
+                document.getElementById("iptxt").value = "192.168.88.5";
+            }
+            var d = localStorage.getItem("platformid");
+            if (d) {
+                document.getElementById("platformtxt").value = d;
+            } else {
+                document.getElementById("platformtxt").value = "2";
+            }
+            */
+        }
+        function setDefaultLocalNet() {
+            document.getElementById("txt").value = "test" + ((1000 * Math.random()) | 0);
+            document.getElementById("sidtxt").value = "1001";
+            document.getElementById("iptxt").value = "192.168.88.5";
+            document.getElementById("platformtxt").value = "2";
+        }
+
+        function setDefaultOutNet() {
+            document.getElementById("txt").value = "test" + ((1000 * Math.random()) | 0);
+            document.getElementById("sidtxt").value = "1001";
+            document.getElementById("iptxt").value = "118.126.100.14";
+            document.getElementById("platformtxt").value = "5";
+        }
+
+    </script>
+</head>
+
+<body onload="init()" style="overflow-x: hidden; overflow-y: hidden">
+    账号 <input id="txt" value="" width="100">
+    <p/> 服务器ID <input id="sidtxt" value="" width="100">
+    <p /> ip地址 <input id="iptxt" value="" width="100">
+    <p /> 平台 <input id="platformtxt" value="" width="100">
+    <p />
+    <button id="butenter" onclick="enter()">登录</button>
+</body>
+
+</html>
