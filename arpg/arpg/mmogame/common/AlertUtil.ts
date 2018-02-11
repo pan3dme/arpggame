@@ -153,12 +153,15 @@ class AlertUtil extends UIConatiner {
     }
     private static alertUtilPan: AlertUtil
     public static show(text: string = "", title: string = "", closeHandler: Function = null, flags: number = 2, $btnname: Array<string> = ["确定", "取消"]): AlertUtil {
-
+        /*
         if (!this.alertUtilPan) {
             this.alertUtilPan = new AlertUtil();
         }
         this.alertUtilPan.initData(text, title, flags, closeHandler, $btnname);
-        UIManager.getInstance().addUIContainer(this.alertUtilPan);
+        UIManager.getInstance().removeUIContainer(this.alertUtilPan);
         return this.alertUtilPan;
+        */
+     
+        return null
     }
 }
