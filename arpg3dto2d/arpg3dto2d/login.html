@@ -1,0 +1,93 @@
+﻿<html>
+
+<head>
+    <title>index</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta content="IE=11.00" http-equiv="X-UA-Compatible" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=0.5, maximum-scale=0.5">
+
+    <link rel="apple-touch-icon-precomposed" href="icon.png" />
+    <link rel="touch-icon-precomposed" href="icon.png" />
+
+    <style>
+        canvas {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+    </style>
+    <script>
+        function enter() {
+
+            sessionStorage.clear()
+
+            localStorage.setItem("name", document.getElementById("txt").value);
+            localStorage.setItem("sid", document.getElementById("sidtxt").value);
+
+            localStorage.setItem("ipurl", document.getElementById("iptxt").value);
+            localStorage.setItem("platformid", document.getElementById("platformtxt").value);
+
+            sessionStorage.setItem("name", document.getElementById("txt").value);
+            sessionStorage.setItem("sid", document.getElementById("sidtxt").value);
+
+
+
+            var $indexUrl = window.location.toString();
+            window.location.href = $indexUrl.replace("login.html", "index.html");
+
+
+        }
+
+        function init() {
+
+            document.getElementById("txt").style.fontSize = 50 + "px";
+            document.getElementById("sidtxt").style.fontSize = 50 + "px";
+
+            document.getElementById("iptxt").style.fontSize = 50 + "px";
+            document.getElementById("platformtxt").style.fontSize = 50 + "px";
+
+            document.getElementById("butenter").style.fontSize = 50 + "px";
+
+            var a = localStorage.getItem("name");
+            if (a) {
+                document.getElementById("txt").value = a;
+            } else {
+                document.getElementById("txt").value = "test" + ((1000 * Math.random()) | 0);
+            }
+            var b = localStorage.getItem("sid");
+            if (b) {
+                document.getElementById("sidtxt").value = b;
+            } else {
+                document.getElementById("sidtxt").value = 1001;
+            }
+
+            var c = localStorage.getItem("ipurl");
+            if (c) {
+                document.getElementById("iptxt").value = c;
+            } else {
+                document.getElementById("iptxt").value = "192.168.88.5";
+            }
+            var d = localStorage.getItem("platformid");
+            if (d) {
+                document.getElementById("platformtxt").value = d;
+            } else {
+                document.getElementById("platformtxt").value = "2";
+            }
+
+        }
+    </script>
+</head>
+
+<body onload="init()" style="overflow-x: hidden; overflow-y: hidden">
+    账号 <input id="txt" value="" width="100">
+    <p/> 服务器ID <input id="sidtxt" value="" width="100">
+    <p /> ip地址 <input id="iptxt" value="" width="100">
+    <p /> 平台 <input id="platformtxt" value="" width="100">
+    <p />
+    <button id="butenter" onclick="enter()">登录</button>
+</body>
+
+</html>

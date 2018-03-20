@@ -1,0 +1,3 @@
+﻿class ParticleGpuData extends ObjData {
+
+} 
