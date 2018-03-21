@@ -1,0 +1,6 @@
+E:\github\arpggame\arpg3dto2dzip\arpg3dto2dzip\bin\arpg3dto2dzip.dll.config
+E:\github\arpggame\arpg3dto2dzip\arpg3dto2dzip\bin\arpg3dto2dzip.dll
+E:\github\arpggame\arpg3dto2dzip\arpg3dto2dzip\bin\arpg3dto2dzip.pdb
+E:\github\arpggame\arpg3dto2dzip\arpg3dto2dzip\obj\Debug\arpg3dto2dzip.csproj.CoreCompileInputs.cache
+E:\github\arpggame\arpg3dto2dzip\arpg3dto2dzip\obj\Debug\arpg3dto2dzip.dll
+E:\github\arpggame\arpg3dto2dzip\arpg3dto2dzip\obj\Debug\arpg3dto2dzip.pdb

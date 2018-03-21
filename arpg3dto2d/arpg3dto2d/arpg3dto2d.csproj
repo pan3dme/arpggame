@@ -23,13 +23,10 @@
     <Content Include="bins\h5web.zip.js" />
     <Content Include="bins\inflate.min.js" />
     <Content Include="index.html" />
-    <Content Include="2dindex.html" />
     <Content Include="libs\base64.js" />
     <Content Include="libs\md5.js" />
     <Content Include="libs\patrol\astar.js" />
     <Content Include="libs\tween\TweenLite.min.js" />
-    <Content Include="login.html" />
-    <Content Include="random.html" />
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>

@@ -1,0 +1,12 @@
+F:\slefSvn\trunk\2dgame\arpg3dto2d\arpg3dto2d\bin\arpg3dto2d.dll.config
+F:\slefSvn\trunk\2dgame\arpg3dto2d\arpg3dto2d\bin\arpg3dto2d.dll
+F:\slefSvn\trunk\2dgame\arpg3dto2d\arpg3dto2d\bin\arpg3dto2d.pdb
+F:\slefSvn\trunk\2dgame\arpg3dto2d\arpg3dto2d\obj\Debug\arpg3dto2d.csproj.CoreCompileInputs.cache
+F:\slefSvn\trunk\2dgame\arpg3dto2d\arpg3dto2d\obj\Debug\arpg3dto2d.dll
+F:\slefSvn\trunk\2dgame\arpg3dto2d\arpg3dto2d\obj\Debug\arpg3dto2d.pdb
+E:\github\egretui\arpg3dto2d\arpg3dto2d\obj\Debug\arpg3dto2d.dll
+E:\github\egretui\arpg3dto2d\arpg3dto2d\obj\Debug\arpg3dto2d.pdb
+E:\github\egretui\arpg3dto2d\arpg3dto2d\bin\arpg3dto2d.dll.config
+E:\github\egretui\arpg3dto2d\arpg3dto2d\bin\arpg3dto2d.dll
+E:\github\egretui\arpg3dto2d\arpg3dto2d\bin\arpg3dto2d.pdb
+E:\github\egretui\arpg3dto2d\arpg3dto2d\obj\Debug\arpg3dto2d.csproj.CoreCompileInputs.cache
