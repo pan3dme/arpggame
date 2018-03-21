@@ -121,21 +121,34 @@ var TpSceneProcessor = /** @class */ (function (_super) {
             $skill.isDeath = false;
         }
         if (this.paramId == 3 || this.paramId == 4) {
+            /*
             if ($effectName == "skill_01" || $effectName == "skill_02" || $effectName == "skill_03") {
                 $skill.configTrajectory(this.mainChar, this.attackTarget);
-            }
-            else {
+            } else {
+               
                 if ($effectName == "m_skill_01") {
                     $skill.configFixEffect(this.mainChar);
-                }
-                else {
+                } else {
                     this.attackTarget.x = random(50) + 30;
                     this.attackTarget.z = random(50) + 30;
-                    var $tempPos = new Vector3D(this.attackTarget.x, this.attackTarget.y, this.attackTarget.z);
-                    var $hitPosItem = new Array();
-                    $hitPosItem.push($tempPos);
+                    var $tempPos: Vector3D = new Vector3D(this.attackTarget.x, this.attackTarget.y, this.attackTarget.z)
+                    var $hitPosItem: Array<Vector3D> = new Array()
+                    $hitPosItem.push($tempPos)
                     $skill.configFixEffect(this.mainChar, null, $hitPosItem);
+    
                 }
+            }
+            */
+            if ($effectName == "m_skill_01") {
+                $skill.configFixEffect(this.mainChar);
+            }
+            else {
+                this.attackTarget.x = random(50) + 30;
+                this.attackTarget.z = random(50) + 30;
+                var $tempPos = new Vector3D(this.attackTarget.x, this.attackTarget.y, this.attackTarget.z);
+                var $hitPosItem = new Array();
+                $hitPosItem.push($tempPos);
+                $skill.configFixEffect(this.mainChar, null, $hitPosItem);
             }
             this.mainChar.watch(this.attackTarget, true);
         }
