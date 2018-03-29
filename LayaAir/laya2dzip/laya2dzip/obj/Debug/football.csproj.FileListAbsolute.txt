@@ -1,0 +1,7 @@
+C:\wamp\www\work\test\football\football\bin\football.dll.config
+C:\wamp\www\work\test\football\football\bin\football.dll
+C:\wamp\www\work\test\football\football\bin\football.pdb
+C:\wamp\www\work\test\football\football\obj\Debug\football.csproj.CoreCompileInputs.cache
+C:\wamp\www\work\test\football\football\obj\Debug\football.dll
+C:\wamp\www\work\test\football\football\obj\Debug\football.pdb
+C:\wamp\www\work\test\football\football\obj\Debug\football.csprojResolveAssemblyReference.cache

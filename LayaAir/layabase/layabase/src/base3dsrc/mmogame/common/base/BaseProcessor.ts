@@ -1,0 +1,3 @@
+﻿class BaseProcessor extends Processor {
+
+}

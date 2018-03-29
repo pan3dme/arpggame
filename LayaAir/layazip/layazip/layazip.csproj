@@ -1,0 +1,593 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectGuid>{2A9562D5-24A0-4F44-94C5-EADCD36C5804}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <OutputPath>bin</OutputPath>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <TypeScriptToolsVersion>2.7</TypeScriptToolsVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="bin\arpglocal.dll" />
+    <Content Include="bin\arpglocal.pdb" />
+    <Content Include="bin\character.dll" />
+    <Content Include="bin\character.pdb" />
+    <Content Include="bin\characterqk.dll" />
+    <Content Include="bin\characterqk.pdb" />
+    <Content Include="bin\charskill.dll" />
+    <Content Include="bin\charskill.pdb" />
+    <Content Include="bin\effects.dll" />
+    <Content Include="bin\effects.pdb" />
+    <Content Include="bin\football.dll" />
+    <Content Include="bin\football.pdb" />
+    <Content Include="bin\index.html" />
+    <Content Include="bin\js\engine\base\BitMapData.js" />
+    <Content Include="bin\js\engine\base\Camera3D.js" />
+    <Content Include="bin\js\engine\base\ColorType.js" />
+    <Content Include="bin\js\engine\base\Dictionary.js" />
+    <Content Include="bin\js\engine\base\GC.js" />
+    <Content Include="bin\js\engine\base\MeshData.js" />
+    <Content Include="bin\js\engine\base\ObjData.js" />
+    <Content Include="bin\js\engine\base\Object3D.js" />
+    <Content Include="bin\js\engine\base\ResCount.js" />
+    <Content Include="bin\js\engine\base\ResGC.js" />
+    <Content Include="bin\js\engine\context\Context3D.js" />
+    <Content Include="bin\js\engine\context\Scene_data.js" />
+    <Content Include="bin\js\engine\display3D\BaseDiplay3dSprite.js" />
+    <Content Include="bin\js\engine\display3D\Display2dMovie.js" />
+    <Content Include="bin\js\engine\display3D\Display2DSprite.js" />
+    <Content Include="bin\js\engine\display3D\Display3D.js" />
+    <Content Include="bin\js\engine\display3D\Display3dBatchMovie.js" />
+    <Content Include="bin\js\engine\display3D\Display3dBg.js" />
+    <Content Include="bin\js\engine\display3D\Display3dMovie.js" />
+    <Content Include="bin\js\engine\display3D\Display3dShadow.js" />
+    <Content Include="bin\js\engine\display3D\Display3DSky.js" />
+    <Content Include="bin\js\engine\display3D\Display3DSprite.js" />
+    <Content Include="bin\js\engine\display3D\Display3DUISprite.js" />
+    <Content Include="bin\js\engine\display3D\interfaces\IBind.js" />
+    <Content Include="bin\js\engine\display3D\terrain\TerrainDisplay3DSprite.js" />
+    <Content Include="bin\js\engine\Engine.js" />
+    <Content Include="bin\js\engine\events\Event.js" />
+    <Content Include="bin\js\engine\events\EventDispatcher.js" />
+    <Content Include="bin\js\engine\FpsStage.js" />
+    <Content Include="bin\js\engine\material\ConstItem.js" />
+    <Content Include="bin\js\engine\material\DynamicBaseConstItem.js" />
+    <Content Include="bin\js\engine\material\DynamicBaseTexItem.js" />
+    <Content Include="bin\js\engine\material\DynamicConstItem.js" />
+    <Content Include="bin\js\engine\material\DynamicTexItem.js" />
+    <Content Include="bin\js\engine\material\Material.js" />
+    <Content Include="bin\js\engine\material\MaterialBaseParam.js" />
+    <Content Include="bin\js\engine\material\MaterialManager.js" />
+    <Content Include="bin\js\engine\material\MaterialParam.js" />
+    <Content Include="bin\js\engine\material\TexItem.js" />
+    <Content Include="bin\js\engine\material\TextureCube.js" />
+    <Content Include="bin\js\engine\material\TextureManager.js" />
+    <Content Include="bin\js\engine\material\TextureRes.js" />
+    <Content Include="bin\js\engine\math\ByteArray.js" />
+    <Content Include="bin\js\engine\math\Calculation.js" />
+    <Content Include="bin\js\engine\math\Circle.js" />
+    <Content Include="bin\js\engine\math\Groundposition.js" />
+    <Content Include="bin\js\engine\math\MathClass.js" />
+    <Content Include="bin\js\engine\math\MathUtil.js" />
+    <Content Include="bin\js\engine\math\Matrix3D.js" />
+    <Content Include="bin\js\engine\math\Quaternion.js" />
+    <Content Include="bin\js\engine\math\Rectangle.js" />
+    <Content Include="bin\js\engine\math\TestTriangle.js" />
+    <Content Include="bin\js\engine\math\Vector2D.js" />
+    <Content Include="bin\js\engine\math\Vector3D.js" />
+    <Content Include="bin\js\engine\particle\ball\Display3DBallPartilce.js" />
+    <Content Include="bin\js\engine\particle\ball\Display3DBallShader.js" />
+    <Content Include="bin\js\engine\particle\ball\ParticleBallData.js" />
+    <Content Include="bin\js\engine\particle\ball\ParticleBallGpuData.js" />
+    <Content Include="bin\js\engine\particle\bone\Display3DBonePartilce.js" />
+    <Content Include="bin\js\engine\particle\bone\ParticleBoneData.js" />
+    <Content Include="bin\js\engine\particle\CombineParticle.js" />
+    <Content Include="bin\js\engine\particle\CombineParticleData.js" />
+    <Content Include="bin\js\engine\particle\ctrl\AxisMove.js" />
+    <Content Include="bin\js\engine\particle\ctrl\AxisRotaion.js" />
+    <Content Include="bin\js\engine\particle\ctrl\BaseAnim.js" />
+    <Content Include="bin\js\engine\particle\ctrl\KeyFrame.js" />
+    <Content Include="bin\js\engine\particle\ctrl\ScaleAnim.js" />
+    <Content Include="bin\js\engine\particle\ctrl\ScaleChange.js" />
+    <Content Include="bin\js\engine\particle\ctrl\ScaleNoise.js" />
+    <Content Include="bin\js\engine\particle\ctrl\SelfRotation.js" />
+    <Content Include="bin\js\engine\particle\ctrl\TimeLine.js" />
+    <Content Include="bin\js\engine\particle\ctrl\TimeLineData.js" />
+    <Content Include="bin\js\engine\particle\Display3DParticle.js" />
+    <Content Include="bin\js\engine\particle\facet\Display3DFacetParticle.js" />
+    <Content Include="bin\js\engine\particle\facet\Display3DFacetShader.js" />
+    <Content Include="bin\js\engine\particle\facet\ParticleFacetData.js" />
+    <Content Include="bin\js\engine\particle\followlocus\Display3DFollowLocusPartilce.js" />
+    <Content Include="bin\js\engine\particle\followlocus\Display3DFollowLocusShader.js" />
+    <Content Include="bin\js\engine\particle\followlocus\ParticleFollowLocusData.js" />
+    <Content Include="bin\js\engine\particle\follow\Display3DFollowPartilce.js" />
+    <Content Include="bin\js\engine\particle\follow\Display3DFollowShader.js" />
+    <Content Include="bin\js\engine\particle\follow\ParticleFollowData.js" />
+    <Content Include="bin\js\engine\particle\locusball\Display3DLocusBallPartilce.js" />
+    <Content Include="bin\js\engine\particle\locusball\ParticleLocusballData.js" />
+    <Content Include="bin\js\engine\particle\locus\Display3DLocusPartilce.js" />
+    <Content Include="bin\js\engine\particle\locus\Display3DLocusShader.js" />
+    <Content Include="bin\js\engine\particle\locus\ParticleLocusData.js" />
+    <Content Include="bin\js\engine\particle\model\Display3dModelAnimParticle.js" />
+    <Content Include="bin\js\engine\particle\model\Display3DModelObjParticle.js" />
+    <Content Include="bin\js\engine\particle\model\Display3DModelPartilce.js" />
+    <Content Include="bin\js\engine\particle\model\ParticleModelData.js" />
+    <Content Include="bin\js\engine\particle\ParticleData.js" />
+    <Content Include="bin\js\engine\particle\ParticleGpuData.js" />
+    <Content Include="bin\js\engine\particle\ParticleManager.js" />
+    <Content Include="bin\js\engine\program\BuildShader.js" />
+    <Content Include="bin\js\engine\program\Display3DShadowShader.js" />
+    <Content Include="bin\js\engine\program\MaterialAnimShader.js" />
+    <Content Include="bin\js\engine\program\MaterialBatchAnimShader.js" />
+    <Content Include="bin\js\engine\program\MaterialShader.js" />
+    <Content Include="bin\js\engine\program\Movie2DShader.js" />
+    <Content Include="bin\js\engine\program\ProgramManager.js" />
+    <Content Include="bin\js\engine\program\Shader3D.js" />
+    <Content Include="bin\js\engine\program\SkyShader.js" />
+    <Content Include="bin\js\engine\program\Sprite2DShader.js" />
+    <Content Include="bin\js\engine\program\TerrainDisplay3DShader.js" />
+    <Content Include="bin\js\engine\program\UIImageShager.js" />
+    <Content Include="bin\js\engine\program\UIMaskShader.js" />
+    <Content Include="bin\js\engine\program\UIShader.js" />
+    <Content Include="bin\js\engine\scene\grldLevel\LineDisplayShader.js" />
+    <Content Include="bin\js\engine\scene\grldLevel\LineDisplaySprite.js" />
+    <Content Include="bin\js\engine\scene\SceneManager.js" />
+    <Content Include="bin\js\engine\scene\SceneRes.js" />
+    <Content Include="bin\js\engine\scene\tree\QuadTreeNode.js" />
+    <Content Include="bin\js\engine\scene\tree\SceneQuadTree.js" />
+    <Content Include="bin\js\engine\scene\ViewFrustum.js" />
+    <Content Include="bin\js\engine\skill\key\SkillEffect.js" />
+    <Content Include="bin\js\engine\skill\key\SkillFixEffect.js" />
+    <Content Include="bin\js\engine\skill\key\SkillKey.js" />
+    <Content Include="bin\js\engine\skill\key\SkillMulTrajectory.js" />
+    <Content Include="bin\js\engine\skill\key\SkillTrajectory.js" />
+    <Content Include="bin\js\engine\skill\path\PathManager.js" />
+    <Content Include="bin\js\engine\skill\path\SkillMulPath.js" />
+    <Content Include="bin\js\engine\skill\path\SkillPath.js" />
+    <Content Include="bin\js\engine\skill\path\SkillSinPath.js" />
+    <Content Include="bin\js\engine\skill\Skill.js" />
+    <Content Include="bin\js\engine\skill\SkillData.js" />
+    <Content Include="bin\js\engine\skill\SkillManager.js" />
+    <Content Include="bin\js\engine\skill\vo\SkillKeyVo.js" />
+    <Content Include="bin\js\engine\skill\vo\SkillVo.js" />
+    <Content Include="bin\js\engine\ui\base\FrameUIRender.js" />
+    <Content Include="bin\js\engine\ui\base\InteractiveEvent.js" />
+    <Content Include="bin\js\engine\ui\base\TextAlign.js" />
+    <Content Include="bin\js\engine\ui\base\UIAtlas.js" />
+    <Content Include="bin\js\engine\ui\base\UIBackImg.js" />
+    <Content Include="bin\js\engine\ui\base\UICompenent.js" />
+    <Content Include="bin\js\engine\ui\base\UIContainer.js" />
+    <Content Include="bin\js\engine\ui\base\UIData.js" />
+    <Content Include="bin\js\engine\ui\base\UIGridRectangle.js" />
+    <Content Include="bin\js\engine\ui\base\UIListRenderComponent.js" />
+    <Content Include="bin\js\engine\ui\base\UIMask.js" />
+    <Content Include="bin\js\engine\ui\base\UIRectangle.js" />
+    <Content Include="bin\js\engine\ui\base\UIRenderComponent.js" />
+    <Content Include="bin\js\engine\ui\base\UIVirtualContainer.js" />
+    <Content Include="bin\js\engine\ui\compenent\AlphaUiContianer.js" />
+    <Content Include="bin\js\engine\ui\compenent\BaseButton.js" />
+    <Content Include="bin\js\engine\ui\compenent\Button.js" />
+    <Content Include="bin\js\engine\ui\compenent\CdUICompenent.js" />
+    <Content Include="bin\js\engine\ui\compenent\Dis2DUIContianerPanel.js" />
+    <Content Include="bin\js\engine\ui\compenent\FrameCompenent.js" />
+    <Content Include="bin\js\engine\ui\compenent\FrameTipCompenent.js" />
+    <Content Include="bin\js\engine\ui\compenent\Grid9Compenent.js" />
+    <Content Include="bin\js\engine\ui\compenent\GridList.js" />
+    <Content Include="bin\js\engine\ui\compenent\List.js" />
+    <Content Include="bin\js\engine\ui\compenent\RoationUiContianer.js" />
+    <Content Include="bin\js\engine\ui\compenent\SelectButton.js" />
+    <Content Include="bin\js\engine\ui\compenent\SList.js" />
+    <Content Include="bin\js\engine\ui\IconManager.js" />
+    <Content Include="bin\js\engine\ui\PuiData.js" />
+    <Content Include="bin\js\engine\ui\UILoading.js" />
+    <Content Include="bin\js\engine\ui\UIManager.js" />
+    <Content Include="bin\js\engine\ui\UIStage.js" />
+    <Content Include="bin\js\engine\utils\AnimManager.js" />
+    <Content Include="bin\js\engine\utils\ArtFont.js" />
+    <Content Include="bin\js\engine\utils\BloodManager.js" />
+    <Content Include="bin\js\engine\utils\ColorTransition.js" />
+    <Content Include="bin\js\engine\utils\curves\Curve.js" />
+    <Content Include="bin\js\engine\utils\GameUtils.js" />
+    <Content Include="bin\js\engine\utils\GroupDataManager.js" />
+    <Content Include="bin\js\engine\utils\KeyboardType.js" />
+    <Content Include="bin\js\engine\utils\KeyControl.js" />
+    <Content Include="bin\js\engine\utils\LabelTextFont.js" />
+    <Content Include="bin\js\engine\utils\LightProbeManager.js" />
+    <Content Include="bin\js\engine\utils\LoadManager.js" />
+    <Content Include="bin\js\engine\utils\MeshDataManager.js" />
+    <Content Include="bin\js\engine\utils\ObjDataManager.js" />
+    <Content Include="bin\js\engine\utils\res\BaseRes.js" />
+    <Content Include="bin\js\engine\utils\res\GroupRes.js" />
+    <Content Include="bin\js\engine\utils\res\ModelRes.js" />
+    <Content Include="bin\js\engine\utils\res\ResManager.js" />
+    <Content Include="bin\js\engine\utils\res\RoleRes.js" />
+    <Content Include="bin\js\engine\utils\res\RoleResLow.js" />
+    <Content Include="bin\js\engine\utils\res\SkillRes.js" />
+    <Content Include="bin\js\engine\utils\shadow\Shadow.js" />
+    <Content Include="bin\js\engine\utils\shadow\ShadowManager.js" />
+    <Content Include="bin\js\engine\utils\SoundManager.js" />
+    <Content Include="bin\js\engine\utils\TimeUtil.js" />
+    <Content Include="bin\js\engine\utils\Util.js" />
+    <Content Include="bin\js\engine\vo\collistion\CapsuleVo.js" />
+    <Content Include="bin\js\engine\vo\collistion\CollisionVo.js" />
+    <Content Include="bin\js\engine\vo\LightVo.js" />
+    <Content Include="bin\js\engine\vo\skinanim\AnimData.js" />
+    <Content Include="bin\js\engine\vo\skinanim\BoneSocketData.js" />
+    <Content Include="bin\js\engine\vo\skinanim\SkinMesh.js" />
+    <Content Include="bin\js\engine\vo\TestCplus.js" />
+    <Content Include="bin\js\Launch.js" />
+    <Content Include="bin\js\scene2d\CharAction.js" />
+    <Content Include="bin\js\scene2d\GameInstance.js" />
+    <Content Include="bin\js\scene2d\MountChar.js" />
+    <Content Include="bin\js\scene2d\Scene2dStart.js" />
+    <Content Include="bin\js\scene2d\SceneBaseChar.js" />
+    <Content Include="bin\js\scene2d\SceneChar.js" />
+    <Content Include="bin\js\TestSprite.js" />
+    <Content Include="bin\libs\bytebuffer.js" />
+    <Content Include="bin\libs\domparserinone.js" />
+    <Content Include="bin\libs\laya.ani.js" />
+    <Content Include="bin\libs\laya.core.js" />
+    <Content Include="bin\libs\laya.d3.js" />
+    <Content Include="bin\libs\laya.d3Plugin.js" />
+    <Content Include="bin\libs\laya.debugtool.js" />
+    <Content Include="bin\libs\laya.device.js" />
+    <Content Include="bin\libs\laya.filter.js" />
+    <Content Include="bin\libs\laya.html.js" />
+    <Content Include="bin\libs\laya.particle.js" />
+    <Content Include="bin\libs\laya.pathfinding.js" />
+    <Content Include="bin\libs\laya.tiledmap.js" />
+    <Content Include="bin\libs\laya.ui.js" />
+    <Content Include="bin\libs\laya.webgl.js" />
+    <Content Include="bin\libs\laya.wxmini.js" />
+    <Content Include="bin\libs\LayaRender.js" />
+    <Content Include="bin\libs\matter-RenderLaya.js" />
+    <Content Include="bin\libs\matter.js" />
+    <Content Include="bin\libs\min\laya.ani.min.js" />
+    <Content Include="bin\libs\min\laya.core.min.js" />
+    <Content Include="bin\libs\min\laya.d3.min.js" />
+    <Content Include="bin\libs\min\laya.d3Plugin.min.js" />
+    <Content Include="bin\libs\min\laya.debugtool.min.js" />
+    <Content Include="bin\libs\min\laya.device.min.js" />
+    <Content Include="bin\libs\min\laya.filter.min.js" />
+    <Content Include="bin\libs\min\laya.html.min.js" />
+    <Content Include="bin\libs\min\laya.particle.min.js" />
+    <Content Include="bin\libs\min\laya.pathfinding.min.js" />
+    <Content Include="bin\libs\min\laya.tiledmap.min.js" />
+    <Content Include="bin\libs\min\laya.ui.min.js" />
+    <Content Include="bin\libs\min\laya.webgl.min.js" />
+    <Content Include="bin\libs\min\laya.wxmini.min.js" />
+    <Content Include="bin\libs\min\zlib.min.js" />
+    <Content Include="bin\libs\protobuf.js" />
+    <Content Include="bin\libs\worker.js" />
+    <Content Include="bin\res\ui\logo.png" />
+    <Content Include="index.html" />
+    <Content Include="laya\assets\comp\bg.png" />
+    <Content Include="laya\assets\comp\blank.png" />
+    <Content Include="laya\assets\comp\btn_close.png" />
+    <Content Include="laya\assets\comp\button.png" />
+    <Content Include="laya\assets\comp\checkbox.png" />
+    <Content Include="laya\assets\comp\clip_num.png" />
+    <Content Include="laya\assets\comp\clip_selectBox.png" />
+    <Content Include="laya\assets\comp\clip_tree_arrow.png" />
+    <Content Include="laya\assets\comp\clip_tree_folder.png" />
+    <Content Include="laya\assets\comp\combobox.png" />
+    <Content Include="laya\assets\comp\hscroll%24bar.png" />
+    <Content Include="laya\assets\comp\hscroll%24down.png" />
+    <Content Include="laya\assets\comp\hscroll%24up.png" />
+    <Content Include="laya\assets\comp\hscroll.png" />
+    <Content Include="laya\assets\comp\hslider%24bar.png" />
+    <Content Include="laya\assets\comp\hslider.png" />
+    <Content Include="laya\assets\comp\html.png" />
+    <Content Include="laya\assets\comp\image.png" />
+    <Content Include="laya\assets\comp\label.png" />
+    <Content Include="laya\assets\comp\linkbutton.png" />
+    <Content Include="laya\assets\comp\progress%24bar.png" />
+    <Content Include="laya\assets\comp\progress.png" />
+    <Content Include="laya\assets\comp\radio.png" />
+    <Content Include="laya\assets\comp\radiogroup.png" />
+    <Content Include="laya\assets\comp\tab.png" />
+    <Content Include="laya\assets\comp\textarea.png" />
+    <Content Include="laya\assets\comp\textinput.png" />
+    <Content Include="laya\assets\comp\vscroll%24bar.png" />
+    <Content Include="laya\assets\comp\vscroll%24down.png" />
+    <Content Include="laya\assets\comp\vscroll%24up.png" />
+    <Content Include="laya\assets\comp\vscroll.png" />
+    <Content Include="laya\assets\comp\vslider%24bar.png" />
+    <Content Include="laya\assets\comp\vslider.png" />
+    <Content Include="libs\h5web.js" />
+    <Content Include="libs\tween\TweenLite.min.js" />
+    <Content Include="web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\arpglocal.dll.config" />
+    <Content Include="bin\character.dll.config" />
+    <Content Include="bin\characterqk.dll.config" />
+    <Content Include="bin\charskill.dll.config" />
+    <Content Include="bin\cmd_init_res.bat" />
+    <Content Include="bin\effects.dll.config" />
+    <Content Include="bin\football.dll.config" />
+    <Content Include="bin\index.html.dst" />
+    <Content Include="bin\js\engine\base\BitMapData.js.map" />
+    <Content Include="bin\js\engine\base\Camera3D.js.map" />
+    <Content Include="bin\js\engine\base\ColorType.js.map" />
+    <Content Include="bin\js\engine\base\Dictionary.js.map" />
+    <Content Include="bin\js\engine\base\GC.js.map" />
+    <Content Include="bin\js\engine\base\MeshData.js.map" />
+    <Content Include="bin\js\engine\base\ObjData.js.map" />
+    <Content Include="bin\js\engine\base\Object3D.js.map" />
+    <Content Include="bin\js\engine\base\ResCount.js.map" />
+    <Content Include="bin\js\engine\base\ResGC.js.map" />
+    <Content Include="bin\js\engine\context\Context3D.js.map" />
+    <Content Include="bin\js\engine\context\Scene_data.js.map" />
+    <Content Include="bin\js\engine\display3D\BaseDiplay3dSprite.js.map" />
+    <Content Include="bin\js\engine\display3D\Display2dMovie.js.map" />
+    <Content Include="bin\js\engine\display3D\Display2DSprite.js.map" />
+    <Content Include="bin\js\engine\display3D\Display3D.js.map" />
+    <Content Include="bin\js\engine\display3D\Display3dBatchMovie.js.map" />
+    <Content Include="bin\js\engine\display3D\Display3dBg.js.map" />
+    <Content Include="bin\js\engine\display3D\Display3dMovie.js.map" />
+    <Content Include="bin\js\engine\display3D\Display3dShadow.js.map" />
+    <Content Include="bin\js\engine\display3D\Display3DSky.js.map" />
+    <Content Include="bin\js\engine\display3D\Display3DSprite.js.map" />
+    <Content Include="bin\js\engine\display3D\Display3DUISprite.js.map" />
+    <Content Include="bin\js\engine\display3D\interfaces\IBind.js.map" />
+    <Content Include="bin\js\engine\display3D\terrain\TerrainDisplay3DSprite.js.map" />
+    <Content Include="bin\js\engine\Engine.js.map" />
+    <Content Include="bin\js\engine\events\Event.js.map" />
+    <Content Include="bin\js\engine\events\EventDispatcher.js.map" />
+    <Content Include="bin\js\engine\FpsStage.js.map" />
+    <Content Include="bin\js\engine\material\ConstItem.js.map" />
+    <Content Include="bin\js\engine\material\DynamicBaseConstItem.js.map" />
+    <Content Include="bin\js\engine\material\DynamicBaseTexItem.js.map" />
+    <Content Include="bin\js\engine\material\DynamicConstItem.js.map" />
+    <Content Include="bin\js\engine\material\DynamicTexItem.js.map" />
+    <Content Include="bin\js\engine\material\Material.js.map" />
+    <Content Include="bin\js\engine\material\MaterialBaseParam.js.map" />
+    <Content Include="bin\js\engine\material\MaterialManager.js.map" />
+    <Content Include="bin\js\engine\material\MaterialParam.js.map" />
+    <Content Include="bin\js\engine\material\TexItem.js.map" />
+    <Content Include="bin\js\engine\material\TextureCube.js.map" />
+    <Content Include="bin\js\engine\material\TextureManager.js.map" />
+    <Content Include="bin\js\engine\material\TextureRes.js.map" />
+    <Content Include="bin\js\engine\math\ByteArray.js.map" />
+    <Content Include="bin\js\engine\math\Calculation.js.map" />
+    <Content Include="bin\js\engine\math\Circle.js.map" />
+    <Content Include="bin\js\engine\math\Groundposition.js.map" />
+    <Content Include="bin\js\engine\math\MathClass.js.map" />
+    <Content Include="bin\js\engine\math\MathUtil.js.map" />
+    <Content Include="bin\js\engine\math\Matrix3D.js.map" />
+    <Content Include="bin\js\engine\math\Quaternion.js.map" />
+    <Content Include="bin\js\engine\math\Rectangle.js.map" />
+    <Content Include="bin\js\engine\math\TestTriangle.js.map" />
+    <Content Include="bin\js\engine\math\Vector2D.js.map" />
+    <Content Include="bin\js\engine\math\Vector3D.js.map" />
+    <Content Include="bin\js\engine\particle\ball\Display3DBallPartilce.js.map" />
+    <Content Include="bin\js\engine\particle\ball\Display3DBallShader.js.map" />
+    <Content Include="bin\js\engine\particle\ball\ParticleBallData.js.map" />
+    <Content Include="bin\js\engine\particle\ball\ParticleBallGpuData.js.map" />
+    <Content Include="bin\js\engine\particle\bone\Display3DBonePartilce.js.map" />
+    <Content Include="bin\js\engine\particle\bone\ParticleBoneData.js.map" />
+    <Content Include="bin\js\engine\particle\CombineParticle.js.map" />
+    <Content Include="bin\js\engine\particle\CombineParticleData.js.map" />
+    <Content Include="bin\js\engine\particle\ctrl\AxisMove.js.map" />
+    <Content Include="bin\js\engine\particle\ctrl\AxisRotaion.js.map" />
+    <Content Include="bin\js\engine\particle\ctrl\BaseAnim.js.map" />
+    <Content Include="bin\js\engine\particle\ctrl\KeyFrame.js.map" />
+    <Content Include="bin\js\engine\particle\ctrl\ScaleAnim.js.map" />
+    <Content Include="bin\js\engine\particle\ctrl\ScaleChange.js.map" />
+    <Content Include="bin\js\engine\particle\ctrl\ScaleNoise.js.map" />
+    <Content Include="bin\js\engine\particle\ctrl\SelfRotation.js.map" />
+    <Content Include="bin\js\engine\particle\ctrl\TimeLine.js.map" />
+    <Content Include="bin\js\engine\particle\ctrl\TimeLineData.js.map" />
+    <Content Include="bin\js\engine\particle\Display3DParticle.js.map" />
+    <Content Include="bin\js\engine\particle\facet\Display3DFacetParticle.js.map" />
+    <Content Include="bin\js\engine\particle\facet\Display3DFacetShader.js.map" />
+    <Content Include="bin\js\engine\particle\facet\ParticleFacetData.js.map" />
+    <Content Include="bin\js\engine\particle\followlocus\Display3DFollowLocusPartilce.js.map" />
+    <Content Include="bin\js\engine\particle\followlocus\Display3DFollowLocusShader.js.map" />
+    <Content Include="bin\js\engine\particle\followlocus\ParticleFollowLocusData.js.map" />
+    <Content Include="bin\js\engine\particle\follow\Display3DFollowPartilce.js.map" />
+    <Content Include="bin\js\engine\particle\follow\Display3DFollowShader.js.map" />
+    <Content Include="bin\js\engine\particle\follow\ParticleFollowData.js.map" />
+    <Content Include="bin\js\engine\particle\locusball\Display3DLocusBallPartilce.js.map" />
+    <Content Include="bin\js\engine\particle\locusball\ParticleLocusballData.js.map" />
+    <Content Include="bin\js\engine\particle\locus\Display3DLocusPartilce.js.map" />
+    <Content Include="bin\js\engine\particle\locus\Display3DLocusShader.js.map" />
+    <Content Include="bin\js\engine\particle\locus\ParticleLocusData.js.map" />
+    <Content Include="bin\js\engine\particle\model\Display3dModelAnimParticle.js.map" />
+    <Content Include="bin\js\engine\particle\model\Display3DModelObjParticle.js.map" />
+    <Content Include="bin\js\engine\particle\model\Display3DModelPartilce.js.map" />
+    <Content Include="bin\js\engine\particle\model\ParticleModelData.js.map" />
+    <Content Include="bin\js\engine\particle\ParticleData.js.map" />
+    <Content Include="bin\js\engine\particle\ParticleGpuData.js.map" />
+    <Content Include="bin\js\engine\particle\ParticleManager.js.map" />
+    <Content Include="bin\js\engine\program\BuildShader.js.map" />
+    <Content Include="bin\js\engine\program\Display3DShadowShader.js.map" />
+    <Content Include="bin\js\engine\program\MaterialAnimShader.js.map" />
+    <Content Include="bin\js\engine\program\MaterialBatchAnimShader.js.map" />
+    <Content Include="bin\js\engine\program\MaterialShader.js.map" />
+    <Content Include="bin\js\engine\program\Movie2DShader.js.map" />
+    <Content Include="bin\js\engine\program\ProgramManager.js.map" />
+    <Content Include="bin\js\engine\program\Shader3D.js.map" />
+    <Content Include="bin\js\engine\program\SkyShader.js.map" />
+    <Content Include="bin\js\engine\program\Sprite2DShader.js.map" />
+    <Content Include="bin\js\engine\program\TerrainDisplay3DShader.js.map" />
+    <Content Include="bin\js\engine\program\UIImageShager.js.map" />
+    <Content Include="bin\js\engine\program\UIMaskShader.js.map" />
+    <Content Include="bin\js\engine\program\UIShader.js.map" />
+    <Content Include="bin\js\engine\scene\grldLevel\LineDisplayShader.js.map" />
+    <Content Include="bin\js\engine\scene\grldLevel\LineDisplaySprite.js.map" />
+    <Content Include="bin\js\engine\scene\SceneManager.js.map" />
+    <Content Include="bin\js\engine\scene\SceneRes.js.map" />
+    <Content Include="bin\js\engine\scene\tree\QuadTreeNode.js.map" />
+    <Content Include="bin\js\engine\scene\tree\SceneQuadTree.js.map" />
+    <Content Include="bin\js\engine\scene\ViewFrustum.js.map" />
+    <Content Include="bin\js\engine\skill\key\SkillEffect.js.map" />
+    <Content Include="bin\js\engine\skill\key\SkillFixEffect.js.map" />
+    <Content Include="bin\js\engine\skill\key\SkillKey.js.map" />
+    <Content Include="bin\js\engine\skill\key\SkillMulTrajectory.js.map" />
+    <Content Include="bin\js\engine\skill\key\SkillTrajectory.js.map" />
+    <Content Include="bin\js\engine\skill\path\PathManager.js.map" />
+    <Content Include="bin\js\engine\skill\path\SkillMulPath.js.map" />
+    <Content Include="bin\js\engine\skill\path\SkillPath.js.map" />
+    <Content Include="bin\js\engine\skill\path\SkillSinPath.js.map" />
+    <Content Include="bin\js\engine\skill\Skill.js.map" />
+    <Content Include="bin\js\engine\skill\SkillData.js.map" />
+    <Content Include="bin\js\engine\skill\SkillManager.js.map" />
+    <Content Include="bin\js\engine\skill\vo\SkillKeyVo.js.map" />
+    <Content Include="bin\js\engine\skill\vo\SkillVo.js.map" />
+    <Content Include="bin\js\engine\ui\base\FrameUIRender.js.map" />
+    <Content Include="bin\js\engine\ui\base\InteractiveEvent.js.map" />
+    <Content Include="bin\js\engine\ui\base\TextAlign.js.map" />
+    <Content Include="bin\js\engine\ui\base\UIAtlas.js.map" />
+    <Content Include="bin\js\engine\ui\base\UIBackImg.js.map" />
+    <Content Include="bin\js\engine\ui\base\UICompenent.js.map" />
+    <Content Include="bin\js\engine\ui\base\UIContainer.js.map" />
+    <Content Include="bin\js\engine\ui\base\UIData.js.map" />
+    <Content Include="bin\js\engine\ui\base\UIGridRectangle.js.map" />
+    <Content Include="bin\js\engine\ui\base\UIListRenderComponent.js.map" />
+    <Content Include="bin\js\engine\ui\base\UIMask.js.map" />
+    <Content Include="bin\js\engine\ui\base\UIRectangle.js.map" />
+    <Content Include="bin\js\engine\ui\base\UIRenderComponent.js.map" />
+    <Content Include="bin\js\engine\ui\base\UIVirtualContainer.js.map" />
+    <Content Include="bin\js\engine\ui\compenent\AlphaUiContianer.js.map" />
+    <Content Include="bin\js\engine\ui\compenent\BaseButton.js.map" />
+    <Content Include="bin\js\engine\ui\compenent\Button.js.map" />
+    <Content Include="bin\js\engine\ui\compenent\CdUICompenent.js.map" />
+    <Content Include="bin\js\engine\ui\compenent\Dis2DUIContianerPanel.js.map" />
+    <Content Include="bin\js\engine\ui\compenent\FrameCompenent.js.map" />
+    <Content Include="bin\js\engine\ui\compenent\FrameTipCompenent.js.map" />
+    <Content Include="bin\js\engine\ui\compenent\Grid9Compenent.js.map" />
+    <Content Include="bin\js\engine\ui\compenent\GridList.js.map" />
+    <Content Include="bin\js\engine\ui\compenent\List.js.map" />
+    <Content Include="bin\js\engine\ui\compenent\RoationUiContianer.js.map" />
+    <Content Include="bin\js\engine\ui\compenent\SelectButton.js.map" />
+    <Content Include="bin\js\engine\ui\compenent\SList.js.map" />
+    <Content Include="bin\js\engine\ui\IconManager.js.map" />
+    <Content Include="bin\js\engine\ui\PuiData.js.map" />
+    <Content Include="bin\js\engine\ui\UILoading.js.map" />
+    <Content Include="bin\js\engine\ui\UIManager.js.map" />
+    <Content Include="bin\js\engine\ui\UIStage.js.map" />
+    <Content Include="bin\js\engine\utils\AnimManager.js.map" />
+    <Content Include="bin\js\engine\utils\ArtFont.js.map" />
+    <Content Include="bin\js\engine\utils\BloodManager.js.map" />
+    <Content Include="bin\js\engine\utils\ColorTransition.js.map" />
+    <Content Include="bin\js\engine\utils\curves\Curve.js.map" />
+    <Content Include="bin\js\engine\utils\GameUtils.js.map" />
+    <Content Include="bin\js\engine\utils\GroupDataManager.js.map" />
+    <Content Include="bin\js\engine\utils\KeyboardType.js.map" />
+    <Content Include="bin\js\engine\utils\KeyControl.js.map" />
+    <Content Include="bin\js\engine\utils\LabelTextFont.js.map" />
+    <Content Include="bin\js\engine\utils\LightProbeManager.js.map" />
+    <Content Include="bin\js\engine\utils\LoadManager.js.map" />
+    <Content Include="bin\js\engine\utils\MeshDataManager.js.map" />
+    <Content Include="bin\js\engine\utils\ObjDataManager.js.map" />
+    <Content Include="bin\js\engine\utils\res\BaseRes.js.map" />
+    <Content Include="bin\js\engine\utils\res\GroupRes.js.map" />
+    <Content Include="bin\js\engine\utils\res\ModelRes.js.map" />
+    <Content Include="bin\js\engine\utils\res\ResManager.js.map" />
+    <Content Include="bin\js\engine\utils\res\RoleRes.js.map" />
+    <Content Include="bin\js\engine\utils\res\RoleResLow.js.map" />
+    <Content Include="bin\js\engine\utils\res\SkillRes.js.map" />
+    <Content Include="bin\js\engine\utils\shadow\Shadow.js.map" />
+    <Content Include="bin\js\engine\utils\shadow\ShadowManager.js.map" />
+    <Content Include="bin\js\engine\utils\SoundManager.js.map" />
+    <Content Include="bin\js\engine\utils\TimeUtil.js.map" />
+    <Content Include="bin\js\engine\utils\Util.js.map" />
+    <Content Include="bin\js\engine\vo\collistion\CapsuleVo.js.map" />
+    <Content Include="bin\js\engine\vo\collistion\CollisionVo.js.map" />
+    <Content Include="bin\js\engine\vo\LightVo.js.map" />
+    <Content Include="bin\js\engine\vo\skinanim\AnimData.js.map" />
+    <Content Include="bin\js\engine\vo\skinanim\BoneSocketData.js.map" />
+    <Content Include="bin\js\engine\vo\skinanim\SkinMesh.js.map" />
+    <Content Include="bin\js\engine\vo\TestCplus.js.map" />
+    <Content Include="bin\js\Launch.js.map" />
+    <Content Include="bin\js\scene2d\CharAction.js.map" />
+    <Content Include="bin\js\scene2d\GameInstance.js.map" />
+    <Content Include="bin\js\scene2d\MountChar.js.map" />
+    <Content Include="bin\js\scene2d\Scene2dStart.js.map" />
+    <Content Include="bin\js\scene2d\SceneBaseChar.js.map" />
+    <Content Include="bin\js\scene2d\SceneChar.js.map" />
+    <Content Include="bin\js\TestSprite.js.map" />
+    <Content Include="laya\.laya" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="libs\h5web.d.ts" />
+    <TypeScriptCompile Include="libs\LayaAir.d.ts" />
+    <TypeScriptCompile Include="libs\libs.d.ts" />
+    <TypeScriptCompile Include="libs\tween\TweenLite.d.ts" />
+    <TypeScriptCompile Include="src\Launch.ts" />
+    <TypeScriptCompile Include="src\myShaderSprite.ts" />
+    <TypeScriptCompile Include="src\pan3d\CharSkillPlayModel.ts" />
+    <TypeScriptCompile Include="src\pan3d\override\OverrideEngine.ts" />
+    <TypeScriptCompile Include="src\pan3d\override\OverrideSceneManager.ts" />
+    <TypeScriptCompile Include="src\pan3d\Scene3dInit.ts" />
+    <TypeScriptCompile Include="src\pan3d\CharModelShow.ts" />
+    <TypeScriptCompile Include="src\pan3d\scenedis\ModelSceneChar.ts" />
+    <TypeScriptCompile Include="src\pan3d\scenedis\ModelshowMouseManager.ts" />
+    <TypeScriptCompile Include="src\pan3d\scenedis\SceneMouseEventModel.ts" />
+    <TypeScriptCompile Include="src\pan3d\scenedis\SkillSceneChar.ts" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>arpg</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>Always</RunPostBuildEvent>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets')" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>12290</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:12291/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptRemoveComments>false</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+    <TypeScriptGeneratesDeclarations>False</TypeScriptGeneratesDeclarations>
+    <TypeScriptOutDir>$(ProjectDir)/jsbin</TypeScriptOutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <TypeScriptRemoveComments>true</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>false</TypeScriptSourceMap>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <PropertyGroup>
+    <PreBuildEvent>attrib -r /s "$(ProjectDir)*.js"</PreBuildEvent>
+  </PropertyGroup>
+</Project>

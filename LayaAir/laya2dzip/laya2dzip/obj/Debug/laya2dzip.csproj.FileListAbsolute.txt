@@ -1,0 +1,12 @@
+C:\wamp\www\work\LayaAir\laya2dzip\laya2dzip\bin\laya2dzip.dll.config
+C:\wamp\www\work\LayaAir\laya2dzip\laya2dzip\bin\laya2dzip.dll
+C:\wamp\www\work\LayaAir\laya2dzip\laya2dzip\bin\laya2dzip.pdb
+C:\wamp\www\work\LayaAir\laya2dzip\laya2dzip\obj\Debug\laya2dzip.csproj.CoreCompileInputs.cache
+C:\wamp\www\work\LayaAir\laya2dzip\laya2dzip\obj\Debug\laya2dzip.dll
+C:\wamp\www\work\LayaAir\laya2dzip\laya2dzip\obj\Debug\laya2dzip.pdb
+E:\github\arpggame\LayaAir\laya2dzip\laya2dzip\bin\laya2dzip.dll.config
+E:\github\arpggame\LayaAir\laya2dzip\laya2dzip\bin\laya2dzip.dll
+E:\github\arpggame\LayaAir\laya2dzip\laya2dzip\bin\laya2dzip.pdb
+E:\github\arpggame\LayaAir\laya2dzip\laya2dzip\obj\Debug\laya2dzip.csproj.CoreCompileInputs.cache
+E:\github\arpggame\LayaAir\laya2dzip\laya2dzip\obj\Debug\laya2dzip.dll
+E:\github\arpggame\LayaAir\laya2dzip\laya2dzip\obj\Debug\laya2dzip.pdb

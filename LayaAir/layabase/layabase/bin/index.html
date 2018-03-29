@@ -1,0 +1,257 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8' />
+	<title>www.layabox.com</title>
+	<meta name='viewport' content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no'
+	/>
+	<meta name="renderer" content="webkit"/>
+	<meta name='apple-mobile-web-app-capable' content='yes' />
+	<meta name='full-screen' content='true' />
+	<meta name='x5-fullscreen' content='true' />
+	<meta name='360-fullscreen' content='true' />
+	<meta name="laya" screenorientation ="landscape"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta http-equiv='expires' content='0' />
+	<meta http-equiv="Cache-Control" content="no-siteapp"/>
+</head>
+
+<body>
+	<!--以下引用了常用类库，如果不使用，可以删除-->
+	<!--核心包，封装了显示对象渲染，事件，时间管理，时间轴动画，缓动，消息交互,socket，本地存储，鼠标触摸，声音，加载，颜色滤镜，位图字体等-->
+	<script type="text/javascript" src="libs/laya.core.js"></script>
+	<!--提供了微信小游戏的适配-->
+	<script type="text/javascript" src="libs/laya.wxmini.js"></script>
+	<!--封装了webgl渲染管线，如果使用webgl渲染，可以在初始化时调用Laya.init(1000,800,laya.webgl.WebGL);-->
+    <script type="text/javascript" src="libs/laya.webgl.js"></script>
+	<!--是动画模块，包含了swf动画，骨骼动画等-->
+    <script type="text/javascript" src="libs/laya.ani.js"></script>
+	<!--包含更多webgl滤镜，比如外发光，阴影，模糊以及更多-->
+    <script type="text/javascript" src="libs/laya.filter.js"></script>
+	<!--封装了html动态排版功能-->
+    <script type="text/javascript" src="libs/laya.html.js"></script>
+	<!--粒子类库-->
+    <script type="text/javascript" src="libs/laya.particle.js"></script>
+	<!--提供tileMap解析支持-->
+    <script type="text/javascript" src="libs/laya.tiledmap.js"></script>
+	<!--提供了制作UI的各种组件实现-->
+    <script type="text/javascript" src="libs/laya.ui.js"></script>
+	<!-- 物理引擎matter.js -->
+	<!--用户自定义顺序文件添加到这里-->
+	<!--jsfile--Custom-->
+	<!--jsfile--Custom-->
+	<!--自定义的js(src文件夹下)文件自动添加到下面jsfile模块标签里面里-->
+	<script type="text/javascript" src="libs/min/zlib.min.js"></script>
+	<!--删除标签，ide不会自动添加js文件，请谨慎操作-->
+	<!--jsfile--startTag-->
+	<script src="js/scene2d/Scene2dStart.js"></script>
+	<script src="js/scene2d/GameInstance.js"></script>
+	<script src="js/scene2d/CharAction.js"></script>
+	<script src="js/engine/vo/TestCplus.js"></script>
+	<script src="js/engine/vo/skinanim/BoneSocketData.js"></script>
+	<script src="js/engine/vo/skinanim/AnimData.js"></script>
+	<script src="js/engine/vo/LightVo.js"></script>
+	<script src="js/engine/vo/collistion/CapsuleVo.js"></script>
+	<script src="js/engine/utils/Util.js"></script>
+	<script src="js/engine/utils/TimeUtil.js"></script>
+	<script src="js/engine/utils/SoundManager.js"></script>
+	<script src="js/engine/utils/shadow/ShadowManager.js"></script>
+	<script src="js/engine/utils/shadow/Shadow.js"></script>
+	<script src="js/engine/utils/LoadManager.js"></script>
+	<script src="js/engine/utils/LightProbeManager.js"></script>
+	<script src="js/engine/utils/LabelTextFont.js"></script>
+	<script src="js/engine/utils/KeyControl.js"></script>
+	<script src="js/engine/utils/KeyboardType.js"></script>
+	<script src="js/engine/utils/GameUtils.js"></script>
+	<script src="js/engine/utils/curves/Curve.js"></script>
+	<script src="js/engine/utils/ColorTransition.js"></script>
+	<script src="js/engine/utils/ArtFont.js"></script>
+	<script src="js/engine/ui/UIManager.js"></script>
+	<script src="js/engine/ui/PuiData.js"></script>
+	<script src="js/engine/ui/IconManager.js"></script>
+	<script src="js/engine/ui/base/UIMask.js"></script>
+	<script src="js/engine/ui/base/UIData.js"></script>
+	<script src="js/engine/ui/base/UIAtlas.js"></script>
+	<script src="js/engine/ui/base/TextAlign.js"></script>
+	<script src="js/engine/skill/vo/SkillVo.js"></script>
+	<script src="js/engine/skill/path/PathManager.js"></script>
+	<script src="js/engine/scene/ViewFrustum.js"></script>
+	<script src="js/engine/scene/tree/SceneQuadTree.js"></script>
+	<script src="js/engine/scene/tree/QuadTreeNode.js"></script>
+	<script src="js/engine/scene/SceneManager.js"></script>
+	<script src="js/engine/particle/ctrl/TimeLineData.js"></script>
+	<script src="js/engine/particle/ctrl/KeyFrame.js"></script>
+	<script src="js/engine/math/Vector3D.js"></script>
+	<script src="js/engine/math/Vector2D.js"></script>
+	<script src="js/engine/math/TestTriangle.js"></script>
+	<script src="js/engine/math/Rectangle.js"></script>
+	<script src="js/engine/math/Quaternion.js"></script>
+	<script src="js/engine/math/Matrix3D.js"></script>
+	<script src="js/engine/math/MathUtil.js"></script>
+	<script src="js/engine/math/MathClass.js"></script>
+	<script src="js/engine/math/Groundposition.js"></script>
+	<script src="js/engine/math/Circle.js"></script>
+	<script src="js/engine/math/Calculation.js"></script>
+	<script src="js/engine/math/ByteArray.js"></script>
+	<script src="js/engine/material/TextureCube.js"></script>
+	<script src="js/engine/material/TexItem.js"></script>
+	<script src="js/engine/material/DynamicBaseTexItem.js"></script>
+	<script src="js/engine/material/DynamicBaseConstItem.js"></script>
+	<script src="js/engine/material/ConstItem.js"></script>
+	<script src="js/engine/FpsStage.js"></script>
+	<script src="js/engine/events/Event.js"></script>
+	<script src="js/engine/Engine.js"></script>
+	<script src="js/engine/display3D/interfaces/IBind.js"></script>
+	<script src="js/engine/context/Scene_data.js"></script>
+	<script src="js/engine/context/Context3D.js"></script>
+	<script src="js/engine/base/ResGC.js"></script>
+	<script src="js/engine/base/GC.js"></script>
+	<script src="js/engine/base/ColorType.js"></script>
+	<script src="js/engine/base/BitMapData.js"></script>
+	<script src="js/engine/events/EventDispatcher.js"></script>
+	<script src="js/engine/base/Object3D.js"></script>
+	<script src="js/engine/base/Camera3D.js"></script>
+	<script src="js/engine/base/Dictionary.js"></script>
+	<script src="js/engine/base/ResCount.js"></script>
+	<script src="js/engine/base/ObjData.js"></script>
+	<script src="js/engine/base/MeshData.js"></script>
+	<script src="js/engine/display3D/Display3D.js"></script>
+	<script src="js/engine/program/Shader3D.js"></script>
+	<script src="js/engine/display3D/BaseDiplay3dSprite.js"></script>
+	<script src="js/engine/display3D/Display2dMovie.js"></script>
+	<script src="js/engine/display3D/Display2DSprite.js"></script>
+	<script src="js/engine/display3D/Display3DSprite.js"></script>
+	<script src="js/engine/display3D/Display3dMovie.js"></script>
+	<script src="js/engine/display3D/Display3dBatchMovie.js"></script>
+	<script src="js/engine/display3D/Display3dBg.js"></script>
+	<script src="js/engine/display3D/Display3dShadow.js"></script>
+	<script src="js/engine/display3D/Display3DSky.js"></script>
+	<script src="js/engine/display3D/Display3DUISprite.js"></script>
+	<script src="js/engine/display3D/terrain/TerrainDisplay3DSprite.js"></script>
+	<script src="js/engine/material/DynamicConstItem.js"></script>
+	<script src="js/engine/material/DynamicTexItem.js"></script>
+	<script src="js/engine/material/Material.js"></script>
+	<script src="js/engine/material/MaterialBaseParam.js"></script>
+	<script src="js/engine/material/MaterialManager.js"></script>
+	<script src="js/engine/material/MaterialParam.js"></script>
+	<script src="js/engine/material/TextureManager.js"></script>
+	<script src="js/engine/material/TextureRes.js"></script>
+	<script src="js/engine/particle/Display3DParticle.js"></script>
+	<script src="js/engine/particle/ball/Display3DBallPartilce.js"></script>
+	<script src="js/engine/particle/ball/Display3DBallShader.js"></script>
+	<script src="js/engine/particle/ParticleData.js"></script>
+	<script src="js/engine/particle/ball/ParticleBallData.js"></script>
+	<script src="js/engine/particle/ParticleGpuData.js"></script>
+	<script src="js/engine/particle/ball/ParticleBallGpuData.js"></script>
+	<script src="js/engine/particle/bone/Display3DBonePartilce.js"></script>
+	<script src="js/engine/particle/bone/ParticleBoneData.js"></script>
+	<script src="js/engine/particle/CombineParticle.js"></script>
+	<script src="js/engine/particle/CombineParticleData.js"></script>
+	<script src="js/engine/particle/ctrl/BaseAnim.js"></script>
+	<script src="js/engine/particle/ctrl/AxisMove.js"></script>
+	<script src="js/engine/particle/ctrl/AxisRotaion.js"></script>
+	<script src="js/engine/particle/ctrl/ScaleAnim.js"></script>
+	<script src="js/engine/particle/ctrl/ScaleChange.js"></script>
+	<script src="js/engine/particle/ctrl/ScaleNoise.js"></script>
+	<script src="js/engine/particle/ctrl/SelfRotation.js"></script>
+	<script src="js/engine/particle/ctrl/TimeLine.js"></script>
+	<script src="js/engine/particle/facet/Display3DFacetParticle.js"></script>
+	<script src="js/engine/particle/facet/Display3DFacetShader.js"></script>
+	<script src="js/engine/particle/facet/ParticleFacetData.js"></script>
+	<script src="js/engine/particle/follow/Display3DFollowPartilce.js"></script>
+	<script src="js/engine/particle/follow/Display3DFollowShader.js"></script>
+	<script src="js/engine/particle/follow/ParticleFollowData.js"></script>
+	<script src="js/engine/particle/followlocus/Display3DFollowLocusPartilce.js"></script>
+	<script src="js/engine/particle/followlocus/Display3DFollowLocusShader.js"></script>
+	<script src="js/engine/particle/followlocus/ParticleFollowLocusData.js"></script>
+	<script src="js/engine/particle/locus/Display3DLocusPartilce.js"></script>
+	<script src="js/engine/particle/locus/Display3DLocusShader.js"></script>
+	<script src="js/engine/particle/locus/ParticleLocusData.js"></script>
+	<script src="js/engine/particle/locusball/Display3DLocusBallPartilce.js"></script>
+	<script src="js/engine/particle/locusball/ParticleLocusballData.js"></script>
+	<script src="js/engine/particle/model/Display3DModelPartilce.js"></script>
+	<script src="js/engine/particle/model/Display3dModelAnimParticle.js"></script>
+	<script src="js/engine/particle/model/Display3DModelObjParticle.js"></script>
+	<script src="js/engine/particle/model/ParticleModelData.js"></script>
+	<script src="js/engine/particle/ParticleManager.js"></script>
+	<script src="js/engine/program/BuildShader.js"></script>
+	<script src="js/engine/program/Display3DShadowShader.js"></script>
+	<script src="js/engine/program/MaterialAnimShader.js"></script>
+	<script src="js/engine/program/MaterialBatchAnimShader.js"></script>
+	<script src="js/engine/program/MaterialShader.js"></script>
+	<script src="js/engine/program/Movie2DShader.js"></script>
+	<script src="js/engine/program/ProgramManager.js"></script>
+	<script src="js/engine/program/SkyShader.js"></script>
+	<script src="js/engine/program/Sprite2DShader.js"></script>
+	<script src="js/engine/program/TerrainDisplay3DShader.js"></script>
+	<script src="js/engine/program/UIImageShager.js"></script>
+	<script src="js/engine/program/UIMaskShader.js"></script>
+	<script src="js/engine/program/UIShader.js"></script>
+	<script src="js/engine/scene/grldLevel/LineDisplayShader.js"></script>
+	<script src="js/engine/scene/grldLevel/LineDisplaySprite.js"></script>
+	<script src="js/engine/utils/res/BaseRes.js"></script>
+	<script src="js/engine/scene/SceneRes.js"></script>
+	<script src="js/engine/skill/key/SkillKey.js"></script>
+	<script src="js/engine/skill/key/SkillEffect.js"></script>
+	<script src="js/engine/skill/key/SkillFixEffect.js"></script>
+	<script src="js/engine/skill/key/SkillTrajectory.js"></script>
+	<script src="js/engine/skill/key/SkillMulTrajectory.js"></script>
+	<script src="js/engine/skill/path/SkillPath.js"></script>
+	<script src="js/engine/skill/path/SkillMulPath.js"></script>
+	<script src="js/engine/skill/path/SkillSinPath.js"></script>
+	<script src="js/engine/skill/Skill.js"></script>
+	<script src="js/engine/skill/SkillData.js"></script>
+	<script src="js/engine/skill/SkillManager.js"></script>
+	<script src="js/engine/skill/vo/SkillKeyVo.js"></script>
+	<script src="js/engine/ui/base/UIRenderComponent.js"></script>
+	<script src="js/engine/ui/base/FrameUIRender.js"></script>
+	<script src="js/engine/ui/base/InteractiveEvent.js"></script>
+	<script src="js/engine/ui/base/UIBackImg.js"></script>
+	<script src="js/engine/ui/base/UICompenent.js"></script>
+	<script src="js/engine/ui/base/UIContainer.js"></script>
+	<script src="js/engine/ui/base/UIRectangle.js"></script>
+	<script src="js/engine/ui/base/UIGridRectangle.js"></script>
+	<script src="js/engine/ui/base/UIListRenderComponent.js"></script>
+	<script src="js/engine/ui/base/UIVirtualContainer.js"></script>
+	<script src="js/engine/ui/compenent/Dis2DUIContianerPanel.js"></script>
+	<script src="js/engine/ui/compenent/Grid9Compenent.js"></script>
+	<script src="js/engine/ui/compenent/AlphaUiContianer.js"></script>
+	<script src="js/engine/ui/compenent/BaseButton.js"></script>
+	<script src="js/engine/ui/compenent/Button.js"></script>
+	<script src="js/engine/ui/compenent/CdUICompenent.js"></script>
+	<script src="js/engine/ui/compenent/FrameCompenent.js"></script>
+	<script src="js/engine/ui/compenent/FrameTipCompenent.js"></script>
+	<script src="js/engine/ui/compenent/List.js"></script>
+	<script src="js/engine/ui/compenent/GridList.js"></script>
+	<script src="js/engine/ui/compenent/RoationUiContianer.js"></script>
+	<script src="js/engine/ui/compenent/SelectButton.js"></script>
+	<script src="js/engine/ui/compenent/SList.js"></script>
+	<script src="js/engine/ui/UILoading.js"></script>
+	<script src="js/engine/ui/UIStage.js"></script>
+	<script src="js/engine/utils/AnimManager.js"></script>
+	<script src="js/engine/utils/BloodManager.js"></script>
+	<script src="js/engine/utils/GroupDataManager.js"></script>
+	<script src="js/engine/utils/MeshDataManager.js"></script>
+	<script src="js/engine/utils/ObjDataManager.js"></script>
+	<script src="js/engine/utils/res/GroupRes.js"></script>
+	<script src="js/engine/utils/res/ModelRes.js"></script>
+	<script src="js/engine/utils/res/ResManager.js"></script>
+	<script src="js/engine/utils/res/RoleRes.js"></script>
+	<script src="js/engine/utils/res/RoleResLow.js"></script>
+	<script src="js/engine/utils/res/SkillRes.js"></script>
+	<script src="js/engine/vo/collistion/CollisionVo.js"></script>
+	<script src="js/engine/vo/skinanim/SkinMesh.js"></script>
+	<script src="js/scene2d/SceneBaseChar.js"></script>
+	<script src="js/scene2d/MountChar.js"></script>
+	<script src="js/scene2d/SceneChar.js"></script>
+	<script src="js/TestSprite.js"></script>
+	<!--jsfile--endTag-->
+
+	<!--启动类添加到这里-->
+	<!--jsfile--Main-->
+	<script src="js/Launch.js"></script>
+	<!--jsfile--Main-->
+</body>
+
+</html>

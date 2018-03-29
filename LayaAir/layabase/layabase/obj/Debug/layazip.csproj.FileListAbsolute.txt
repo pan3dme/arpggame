@@ -1,0 +1,6 @@
+C:\wamp\www\work\LayaAir\layazip\layazip\bin\layazip.dll.config
+C:\wamp\www\work\LayaAir\layazip\layazip\bin\layazip.dll
+C:\wamp\www\work\LayaAir\layazip\layazip\bin\layazip.pdb
+C:\wamp\www\work\LayaAir\layazip\layazip\obj\Debug\layazip.csproj.CoreCompileInputs.cache
+C:\wamp\www\work\LayaAir\layazip\layazip\obj\Debug\layazip.dll
+C:\wamp\www\work\LayaAir\layazip\layazip\obj\Debug\layazip.pdb
