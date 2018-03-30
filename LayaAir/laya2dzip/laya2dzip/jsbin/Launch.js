@@ -115,19 +115,6 @@ var Launch = /** @class */ (function () {
         $imag.pos(500, 400);
         $imag.pos(500, 500);
         Laya.stage.addChild($imag);
-        // this._scene2dStart = new scene2d.Scene2dStart();
-        // this._scene2dStart.init();
-        //  var sp:TestSprite = new TestSprite(this._scene2dStart );
-        //Laya.stage.addChild(sp);
-        this.onResize();
-        Laya.loader.load("res/ui/logo.png", Laya.Handler.create(this, this.loadComplete));
-    };
-    Launch.prototype.loadComplete = function () {
-        var texture = Laya.Loader.getRes("res/ui/logo.png");
-        var spe = new myShaderSprite();
-        spe.init(texture);
-        spe.pos(0, 0);
-        Laya.stage.addChild(spe);
         var $imag = new Laya.Image('res/ui/logo.png');
         $imag.pos(100, 500);
         Laya.stage.addChild($imag);
@@ -137,6 +124,15 @@ var Launch = /** @class */ (function () {
         var $imag = new Laya.Image('res/ui/logo.png');
         $imag.pos(600, 500);
         Laya.stage.addChild($imag);
+        this.onResize();
+        Laya.loader.load("res/ui/logo.png", Laya.Handler.create(this, this.loadComplete));
+    };
+    Launch.prototype.loadComplete = function () {
+        var texture = Laya.Loader.getRes("res/ui/logo.png");
+        var spe = new myShaderSprite();
+        spe.init(texture);
+        spe.pos(0, 0);
+        Laya.stage.addChild(spe);
     };
     // 心跳更新
     Launch.prototype.onUpdate = function () {
