@@ -8,7 +8,7 @@
             return this._instance;
         }
         constructor() {
-            this.tureMoveV2d = new Vector2D(+100,0)
+            this.tureMoveV2d = new Vector2D(0,0)
 
             this.initSceneFocueEvent()
         }
@@ -36,7 +36,6 @@
         }
         private onMouseDown($evt: InteractiveEvent): void {
    
-   
             this._lastMousePos.x = $evt.x;
             this._lastMousePos.y = $evt.y;
             this.lastPostionV2d = new Vector2D(this.tureMoveV2d.x, this.tureMoveV2d.y)
@@ -54,8 +53,8 @@
 
             Scene_data.focus3D.x -= this.tureMoveV2d.x * Override2dEngine.htmlScale;
             Scene_data.focus3D.z += this.tureMoveV2d.y * Override2dEngine.htmlScale / (Math.sin(45 * Math.PI / 180));
-       
-         //   console.log(this.tureMoveV2d)
+      
+            Ground2dBaseSprite.perentpos = this.tureMoveV2d
    
         }
     }

@@ -18,6 +18,31 @@ var pan2d;
         Override2dSceneManager.initConfig = function () {
             SceneManager._instance = new Override2dSceneManager;
         };
+        Override2dSceneManager.prototype.update = function () {
+            MathClass.getCamView(Scene_data.cam3D, Scene_data.focus3D); //一定要角色帧渲染后再重置镜头矩阵
+            Scene_data.context3D._contextSetTest.clear();
+            if (isNaN(this._time)) {
+                this._time = TimeUtil.getTimer();
+            }
+            pan2d.GroundModel.getInstance().update();
+            this.updateMovieFrame();
+            if (this._ready) {
+                ParticleManager.getInstance().updateTime();
+                SkillManager.getInstance().update();
+                if (this.render) {
+                    Scene_data.context3D.setWriteDepth(true);
+                    Scene_data.context3D.setDepthTest(true);
+                    this.updateStaticDiplay();
+                    this.updateSpriteDisplay();
+                    this.updateMovieDisplay();
+                    Scene_data.context3D.setWriteDepth(false);
+                    ParticleManager.getInstance().update();
+                    BloodManager.getInstance().update();
+                    Scene_data.context3D.setBlendParticleFactors(0);
+                    Scene_data.context3D.setWriteDepth(true);
+                }
+            }
+        };
         return Override2dSceneManager;
     }(pan3d.OverrideSceneManager));
     pan2d.Override2dSceneManager = Override2dSceneManager;

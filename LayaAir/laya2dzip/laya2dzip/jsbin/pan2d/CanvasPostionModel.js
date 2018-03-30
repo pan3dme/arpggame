@@ -4,7 +4,7 @@ var pan2d;
         function CanvasPostionModel() {
             this.lastPostionV2d = new Vector2D;
             this._lastMousePos = new Vector2D();
-            this.tureMoveV2d = new Vector2D(+100, 0);
+            this.tureMoveV2d = new Vector2D(0, 0);
             this.initSceneFocueEvent();
         }
         CanvasPostionModel.getInstance = function () {
@@ -39,7 +39,7 @@ var pan2d;
             Scene_data.focus3D.z = 0 - Scene_data.stageHeight / 2 * pan2d.Override2dEngine.htmlScale / (Math.sin(45 * Math.PI / 180));
             Scene_data.focus3D.x -= this.tureMoveV2d.x * pan2d.Override2dEngine.htmlScale;
             Scene_data.focus3D.z += this.tureMoveV2d.y * pan2d.Override2dEngine.htmlScale / (Math.sin(45 * Math.PI / 180));
-            //   console.log(this.tureMoveV2d)
+            pan2d.Ground2dBaseSprite.perentpos = this.tureMoveV2d;
         };
         return CanvasPostionModel;
     }());

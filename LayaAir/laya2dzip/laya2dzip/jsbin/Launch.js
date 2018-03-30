@@ -128,6 +128,15 @@ var Launch = /** @class */ (function () {
         spe.init(texture);
         spe.pos(0, 0);
         Laya.stage.addChild(spe);
+        var $imag = new Laya.Image('res/ui/logo.png');
+        $imag.pos(100, 500);
+        Laya.stage.addChild($imag);
+        var $imag = new Laya.Image('res/ui/logo.png');
+        $imag.pos(300, 500);
+        Laya.stage.addChild($imag);
+        var $imag = new Laya.Image('res/ui/logo.png');
+        $imag.pos(600, 500);
+        Laya.stage.addChild($imag);
     };
     // 心跳更新
     Launch.prototype.onUpdate = function () {

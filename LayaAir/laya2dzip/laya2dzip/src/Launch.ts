@@ -113,6 +113,19 @@ class Launch {
         spe.init(texture);
         spe.pos(0, 0);
         Laya.stage.addChild(spe);
+
+
+        var $imag: Laya.Image = new Laya.Image('res/ui/logo.png')
+        $imag.pos(100, 500)
+        Laya.stage.addChild($imag);
+
+        var $imag: Laya.Image = new Laya.Image('res/ui/logo.png')
+        $imag.pos(300, 500)
+        Laya.stage.addChild($imag);
+
+        var $imag: Laya.Image = new Laya.Image('res/ui/logo.png')
+        $imag.pos(600, 500)
+        Laya.stage.addChild($imag);
     }
 
     private _prevUpdateTimer: number;

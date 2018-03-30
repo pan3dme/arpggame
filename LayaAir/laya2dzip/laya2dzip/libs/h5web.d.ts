@@ -21,6 +21,7 @@ declare class Object3D {
     scaleY: number;
     scaleZ: number;
     posMatrix: Matrix3D;
+    updateMatrix(): void 
 
 }
 declare class Camera3D extends Object3D {
@@ -133,6 +134,13 @@ declare class Scene_data {
     static sceneViewHW: number
 
 
+}
+declare class Rectangle {
+    constructor($x?: number, $y?: number, $width?: number, $height?: number) 
+    x: number ;
+    y: number ;
+    width: number ;
+    height: number ;
 }
 declare class CombineParticle extends EventDispatcher {
     sceneVisible: boolean
@@ -497,6 +505,7 @@ declare class Display3DSprite extends Display3D {
     _rotationData: Float32Array;
     setMaterialUrl(value: string, $paramData?: Array<any>): void
     setBind($bindTarget: IBind, $bindSocket: string): void 
+    updateRotationMatrix(): void 
 }
 declare class SkinMesh {
     meshAry: Array<MeshData>

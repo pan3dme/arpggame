@@ -538,8 +538,10 @@
     <TypeScriptCompile Include="src\myShaderSprite.ts" />
     <TypeScriptCompile Include="src\pan2d\AppDataArpg.ts" />
     <TypeScriptCompile Include="src\pan2d\CanvasPostionModel.ts" />
+    <TypeScriptCompile Include="src\pan2d\GroundModel.ts" />
     <TypeScriptCompile Include="src\pan2d\override2d\Override2dEngine.ts" />
     <TypeScriptCompile Include="src\pan2d\override2d\Override2dSceneManager.ts" />
+    <TypeScriptCompile Include="src\pan2d\Scene2dChar.ts" />
     <TypeScriptCompile Include="src\pan2d\Scene2dInit.ts" />
     <TypeScriptCompile Include="src\scenedis\CharSkillPlayModel.ts" />
     <TypeScriptCompile Include="src\pan3d\override\OverrideEngine.ts" />
