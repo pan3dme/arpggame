@@ -4,3 +4,9 @@ C:\wamp\www\work\LayaAir\layazip\layazip\bin\layazip.pdb
 C:\wamp\www\work\LayaAir\layazip\layazip\obj\Debug\layazip.csproj.CoreCompileInputs.cache
 C:\wamp\www\work\LayaAir\layazip\layazip\obj\Debug\layazip.dll
 C:\wamp\www\work\LayaAir\layazip\layazip\obj\Debug\layazip.pdb
+E:\github\arpggame\LayaAir\layazip\layazip\bin\layazip.dll.config
+E:\github\arpggame\LayaAir\layazip\layazip\bin\layazip.dll
+E:\github\arpggame\LayaAir\layazip\layazip\bin\layazip.pdb
+E:\github\arpggame\LayaAir\layazip\layazip\obj\Debug\layazip.csproj.CoreCompileInputs.cache
+E:\github\arpggame\LayaAir\layazip\layazip\obj\Debug\layazip.dll
+E:\github\arpggame\LayaAir\layazip\layazip\obj\Debug\layazip.pdb

@@ -99,10 +99,18 @@ class Launch {
         $imag.pos(500, 400)
         $imag.pos(500, 500)
         Laya.stage.addChild($imag);
-        // this._scene2dStart = new scene2d.Scene2dStart();
-        // this._scene2dStart.init();
-        //  var sp:TestSprite = new TestSprite(this._scene2dStart );
-        //Laya.stage.addChild(sp);
+
+        var $imag: Laya.Image = new Laya.Image('res/ui/logo.png')
+        $imag.pos(100, 500)
+        Laya.stage.addChild($imag);
+
+        var $imag: Laya.Image = new Laya.Image('res/ui/logo.png')
+        $imag.pos(300, 500)
+        Laya.stage.addChild($imag);
+
+        var $imag: Laya.Image = new Laya.Image('res/ui/logo.png')
+        $imag.pos(600, 500)
+        Laya.stage.addChild($imag);
 
         this.onResize();
         Laya.loader.load("res/ui/logo.png", Laya.Handler.create(this, this.loadComplete));
@@ -113,6 +121,9 @@ class Launch {
         spe.init(texture);
         spe.pos(0, 0);
         Laya.stage.addChild(spe);
+
+
+   
     }
 
     private _prevUpdateTimer: number;
@@ -153,6 +164,10 @@ class Launch {
         let clientScale = this._clientScale;
         let clientWidth = this._clientWidth;
         let clientHeight = this._clientHeight;
+
+        if (Scene_data.canvas3D) {
+            Engine.resetSize(clientWidth, clientHeight)
+        }
 
     
     }

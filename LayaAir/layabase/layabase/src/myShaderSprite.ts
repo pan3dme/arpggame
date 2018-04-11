@@ -9,7 +9,7 @@ class myShader extends Laya.Shader {
     constructor() {
         //顶点着色器程序和片元着色器程序。
         var vs: string = "attribute vec2 position;attribute vec2 texcoord;attribute vec4 color;uniform vec2 size;uniform mat4 mmat;varying vec2 v_texcoord;varying vec4 v_color;void main(){vec4 pos =mmat*vec4(position.x,position.y,0,1.0);gl_Position = vec4((pos.x/size.x-0.5)*2.0, (0.5-pos.y/size.y)*2.0, pos.z, 1.0);v_color = color;v_texcoord = texcoord;}"
-        var ps: string = "precision mediump float;varying vec2 v_texcoord;varying vec4 v_color;uniform sampler2D texture;void main(){vec4 t_color = texture2D(texture, v_texcoord);gl_FragColor = vec4(1.0,0.0,1.0,1);}";
+        var ps: string = "precision mediump float;varying vec2 v_texcoord;varying vec4 v_color;uniform sampler2D texture;void main(){vec4 t_color = texture2D(texture, v_texcoord);gl_FragColor = vec4(0.0,0.0,0.0,0.0);}";
         super(vs, ps, "myShader");
     }
 }
@@ -95,12 +95,36 @@ class myShaderSprite extends Laya.Sprite {
     //重写渲染函数
     public customRender(context: Laya.RenderContext, x: number, y: number): void {
         (context.ctx as Laya.WebGLContext2D).setIBVB(x, y, (this.iBuffer) as Laya.IndexBuffer2D, (this.vBuffer) as Laya.VertexBuffer2D, this.iNum, null, myShader.shader, this.shaderValue, 0, 0);
-        if (Scene3dInit.isConfig) {
-            Engine.update()
+
+        var $temp: boolean = false
+        if ($temp) {
+            if (pan2d.Scene2dInit.isConfig) {
+                Engine.update()
+            } else {
+                pan2d.Scene2dInit.initData();
+    
+            }
         } else {
-            Scene3dInit.initData()
+            if (pan3d.Scene3dInit.isConfig) {
+                Engine.update()
+            } else {
+                pan3d.Scene3dInit.initData()
+             
+            }
         }
-        (context.ctx as Laya.WebGLContext2D).setIBVB(x, y, (this.iBuffer) as Laya.IndexBuffer2D, (this.vBuffer) as Laya.VertexBuffer2D, this.iNum, null, myShader.shader, this.shaderValue, 0, 0);
+        this.addMainUi();
+    }
+    private mainUiPanel: panui.MainUiPanle
+    private addMainUi(): void {
+        //只加一次
+        if (!this.mainUiPanel) {
+            this.mainUiPanel = new panui.MainUiPanle();
+            UIManager.getInstance().addUIContainer(this.mainUiPanel);
+
+            GameMouseManager.getInstance().addMouseEvent()
+        } else {
+            console.log(main.canvas.width/960, main.canvas.height/540)
+        }
 
     }
 

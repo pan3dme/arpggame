@@ -532,7 +532,6 @@
     <Content Include="src\base3dsrc\engine\ui\.DS_Store" />
     <Content Include="src\base3dsrc\engine\utils\.DS_Store" />
     <Content Include="src\base3dsrc\engine\vo\.DS_Store" />
-    <Content Include="src\base3dsrc\mmogame\.DS_Store" />
     <Content Include="src\base3dsrc\mmogame\common\.DS_Store" />
     <Content Include="src\base3dsrc\mmogame\common\msg\.DS_Store" />
     <Content Include="src\base3dsrc\mmogame\common\msg\event\.DS_Store" />
@@ -1265,15 +1264,23 @@
     <TypeScriptCompile Include="src\base3dsrc\mvcframe\Processor.ts" />
     <TypeScriptCompile Include="src\Launch.ts" />
     <TypeScriptCompile Include="src\myShaderSprite.ts" />
-    <TypeScriptCompile Include="src\pan3d\CharModelShow.ts" />
-    <TypeScriptCompile Include="src\pan3d\CharSkillPlayModel.ts" />
+    <TypeScriptCompile Include="src\pan2d\AppDataArpg.ts" />
+    <TypeScriptCompile Include="src\pan2d\CanvasPostionModel.ts" />
+    <TypeScriptCompile Include="src\pan2d\GroundModel.ts" />
+    <TypeScriptCompile Include="src\pan2d\override2d\Override2dEngine.ts" />
+    <TypeScriptCompile Include="src\pan2d\override2d\Override2dSceneManager.ts" />
+    <TypeScriptCompile Include="src\pan2d\Scene2dChar.ts" />
+    <TypeScriptCompile Include="src\pan2d\Scene2dInit.ts" />
     <TypeScriptCompile Include="src\pan3d\override\OverrideEngine.ts" />
     <TypeScriptCompile Include="src\pan3d\override\OverrideSceneManager.ts" />
     <TypeScriptCompile Include="src\pan3d\Scene3dInit.ts" />
-    <TypeScriptCompile Include="src\pan3d\scenedis\ModelSceneChar.ts" />
-    <TypeScriptCompile Include="src\pan3d\scenedis\ModelshowMouseManager.ts" />
-    <TypeScriptCompile Include="src\pan3d\scenedis\SceneMouseEventModel.ts" />
-    <TypeScriptCompile Include="src\pan3d\scenedis\SkillSceneChar.ts" />
+    <TypeScriptCompile Include="src\panui\MainUiPanle.ts" />
+    <TypeScriptCompile Include="src\scenedis\CharModelShow.ts" />
+    <TypeScriptCompile Include="src\scenedis\CharSkillPlayModel.ts" />
+    <TypeScriptCompile Include="src\scenedis\ModelSceneChar.ts" />
+    <TypeScriptCompile Include="src\scenedis\ModelshowMouseManager.ts" />
+    <TypeScriptCompile Include="src\scenedis\SceneMouseEventModel.ts" />
+    <TypeScriptCompile Include="src\scenedis\SkillSceneChar.ts" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="src\base3dsrc\engine\net\script\.svn\pristine\" />

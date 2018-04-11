@@ -10,3 +10,4 @@ E:\github\arpggame\LayaAir\laya2dzip\laya2dzip\bin\laya2dzip.pdb
 E:\github\arpggame\LayaAir\laya2dzip\laya2dzip\obj\Debug\laya2dzip.csproj.CoreCompileInputs.cache
 E:\github\arpggame\LayaAir\laya2dzip\laya2dzip\obj\Debug\laya2dzip.dll
 E:\github\arpggame\LayaAir\laya2dzip\laya2dzip\obj\Debug\laya2dzip.pdb
+E:\github\arpggame\LayaAir\laya2dzip\laya2dzip\obj\Debug\laya2dzip.csprojResolveAssemblyReference.cache

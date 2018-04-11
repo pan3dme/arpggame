@@ -4,7 +4,7 @@
     public static isIos:boolean;
     public static context3D: Context3D;
     public static canvas3D: HTMLCanvasElement;
-    public static stageWidth: number;
+    private static _stageWidth: number;
     public static stageHeight: number;
     public static sceneViewHW: number = 500;
     public static fileRoot: string = "res/";
@@ -44,9 +44,15 @@
     public static set viewMatrx3D(value: Matrix3D) {
         Scene_data._viewMatrx3D = value
     }
-    public static get viewMatrx3D(): Matrix3D
-    {
+    public static get viewMatrx3D(): Matrix3D {
         return Scene_data._viewMatrx3D;
+    }
+
+    public static set stageWidth(value: number) {
+        Scene_data._stageWidth = value
+    }
+    public static get stageWidth(): number {
+        return Scene_data._stageWidth;
     }
 
     public static supportBlob: boolean = false;

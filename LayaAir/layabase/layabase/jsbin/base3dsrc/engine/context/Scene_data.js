@@ -11,6 +11,16 @@ var Scene_data = /** @class */ (function () {
         enumerable: true,
         configurable: true
     });
+    Object.defineProperty(Scene_data, "stageWidth", {
+        get: function () {
+            return Scene_data._stageWidth;
+        },
+        set: function (value) {
+            Scene_data._stageWidth = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
     Scene_data.sceneViewHW = 500;
     Scene_data.fileRoot = "res/";
     Scene_data.verticalScene = false;

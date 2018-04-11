@@ -40,7 +40,6 @@ var pan2d;
                     BloodManager.getInstance().update();
                     Scene_data.context3D.setBlendParticleFactors(0);
                     Scene_data.context3D.setWriteDepth(true);
-                    Scene_data.context3D.setWriteDepth(false);
                 }
             }
         };
