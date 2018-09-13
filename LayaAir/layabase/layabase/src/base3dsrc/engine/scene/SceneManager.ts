@@ -176,23 +176,12 @@
 
         LightProbeManager.getInstance().setLightProbeData(obj.lightProbeItem);
 
-        AstarUtil.setData(obj.astar);
+      //  AstarUtil.setData(obj.astar);
 
 
         this._ready = true;
 
-        if (obj.quadTreeData) {
-            this._sceneQuadTree = new SceneQuadTree();
-            this._sceneQuadTree.init(obj.quadTreeData, this._sceneDic);
-        } else {
-            this._sceneQuadTree = null;
-        }
-
-        // this.viewFrustum.setData(obj.aabb);
-
-        Scene_data.cam3D.astarRect = AstarUtil.areaRect;
-
-
+ 
 
 
     }
@@ -396,7 +385,7 @@
         Scene_data.context3D.setDepthTest(false);
         UIManager.getInstance().upBgGroundZero();
 
-        Scene_data.context3D.setDepthTest(true);
+        Scene_data.context3D.setDepthTest(false);
         this.updateMovieFrame();
         MathClass.getCamView(Scene_data.cam3D, Scene_data.focus3D); //一定要角色帧渲染后再重置镜头矩阵
         if (this._ready) {
@@ -405,6 +394,8 @@
             SkillManager.getInstance().update();
 
             if (this.render) {
+        
+
                 this.updateStaticDiplay();
                 this.updateSpriteDisplay();
                 Scene_data.context3D.setWriteDepth(true);

@@ -11,7 +11,7 @@ class TpSceneEvent extends BaseEvent {
     //展示面板
     public static SHOW_TP_SCENE_EVENT: string = "SHOW_TP_SCENE_EVENT";
     public static ENTER_SCENE_EVENT: string = "ENTER_SCENE_EVENT";
-    
+
     public mapId: number
 
 }
@@ -40,23 +40,30 @@ class TpSceneProcessor extends BaseProcessor {
         }
     }
     private paramId: number;
-    private makeUrlParam(): void
-    {
+    private makeUrlParam(): void {
         this.paramId = Number(getUrlParam("id"));
         if (isNaN(this.paramId)) {
-            this.paramId=0
+            this.paramId = 0
         }
         this.paramId = Math.floor(this.paramId);
-        this.paramId = this.paramId % 6+1;
-        if (this.paramId<=0 || this.paramId>6) {
+        this.paramId = this.paramId % 6 + 1;
+        if (this.paramId <= 0 || this.paramId > 6) {
             this.paramId = 1;
         }
         if (this.paramId == 3 || this.paramId == 4) {
             this.makeAttackChar();
         }
         this.skillFileName = "jichu_" + (Math.ceil(this.paramId / 2));
+
+
+
+        
         this.charIdstr = "5000" + this.paramId;
         this.weaponNum = 50010 + this.paramId;
+        
+
+        this.charIdstr = "npc_0001";
+        this.skillFileName = "spell_0001";
     }
     private attackTarget: SceneChar
     private makeAttackChar(): void {
@@ -71,17 +78,16 @@ class TpSceneProcessor extends BaseProcessor {
     private skillFileName: string = "jichu_1";
     private charIdstr: string = "50001";
     private weaponNum: number = 50011;
-    private makeMainChar(): void
-    {
+    private makeMainChar(): void {
 
-        SkillManager.getInstance().preLoadSkill(getSkillUrl(this.skillFileName));  
+        SkillManager.getInstance().preLoadSkill(getSkillUrl(this.skillFileName));
         var $sc: SkillSceneChar = new SkillSceneChar();
         $sc.setRoleUrl(getRoleUrl(this.charIdstr));
         SceneManager.getInstance().addMovieDisplay($sc);
         $sc.setWeaponByAvatar(this.weaponNum);
         this.mainChar = $sc;
 
-     
+
         $sc.changeActionFun = () => { this.playSkill() }
         $sc.loadFinishFun = () => {
             ResManager.getInstance().loadSkillRes(Scene_data.fileRoot + getSkillUrl(this.skillFileName), ($skillRes: SkillRes) => {
@@ -90,7 +96,7 @@ class TpSceneProcessor extends BaseProcessor {
                 console.log(TimeUtil.getTimer())
             })
         };
-    
+
     }
 
 
@@ -98,8 +104,8 @@ class TpSceneProcessor extends BaseProcessor {
     private mainChar: SkillSceneChar;
     private skipId: number = 1;
     private skillEffectItem: Array<string> = ["skill_01", "skill_02", "skill_03", "m_skill_01", "m_skill_02", "m_skill_03"]
-    private playSkill(): void
-    {
+    private playSkill(): void {
+        this.skipId=0
         var $effectName: string = this.skillEffectItem[this.skipId % this.skillEffectItem.length];
         var $skill: Skill = SkillManager.getInstance().getSkill(getSkillUrl(this.skillFileName), $effectName);
         if ($skill.keyAry) {
@@ -115,11 +121,10 @@ class TpSceneProcessor extends BaseProcessor {
             $skill.isDeath = false;
         }
         if (this.paramId == 3 || this.paramId == 4) {
-            /*
             if ($effectName == "skill_01" || $effectName == "skill_02" || $effectName == "skill_03") {
                 $skill.configTrajectory(this.mainChar, this.attackTarget);
             } else {
-               
+
                 if ($effectName == "m_skill_01") {
                     $skill.configFixEffect(this.mainChar);
                 } else {
@@ -129,22 +134,9 @@ class TpSceneProcessor extends BaseProcessor {
                     var $hitPosItem: Array<Vector3D> = new Array()
                     $hitPosItem.push($tempPos)
                     $skill.configFixEffect(this.mainChar, null, $hitPosItem);
-    
+
                 }
             }
-            */
-            if ($effectName == "m_skill_01") {
-                $skill.configFixEffect(this.mainChar);
-            } else {
-                this.attackTarget.x = random(50) + 30;
-                this.attackTarget.z = random(50) + 30;
-                var $tempPos: Vector3D = new Vector3D(this.attackTarget.x, this.attackTarget.y, this.attackTarget.z)
-                var $hitPosItem: Array<Vector3D> = new Array()
-                $hitPosItem.push($tempPos)
-                $skill.configFixEffect(this.mainChar, null, $hitPosItem);
-
-            }
-
             this.mainChar.watch(this.attackTarget, true);
         } else {
             $skill.configFixEffect(this.mainChar);
@@ -152,8 +144,7 @@ class TpSceneProcessor extends BaseProcessor {
         this.mainChar.playSkill($skill);
         this.skipId++;
     }
-    private addGridLineSprite(): void
-    {
+    private addGridLineSprite(): void {
         ProgrmaManager.getInstance().registe(LineDisplayShader.LineShader, new LineDisplayShader);
         var $GridLineSprite: GridLineSprite = new GridLineSprite();
         SceneManager.getInstance().addDisplay($GridLineSprite);

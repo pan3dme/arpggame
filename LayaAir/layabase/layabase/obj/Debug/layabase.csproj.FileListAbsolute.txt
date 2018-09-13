@@ -8,7 +8,7 @@ C:\wamp\www\work\LayaAir\layabase\layabase\obj\Debug\layabase.csprojResolveAssem
 E:\github\arpggame\LayaAir\layabase\layabase\bin\layabase.dll.config
 E:\github\arpggame\LayaAir\layabase\layabase\bin\layabase.dll
 E:\github\arpggame\LayaAir\layabase\layabase\bin\layabase.pdb
-E:\github\arpggame\LayaAir\layabase\layabase\obj\Debug\layabase.csprojResolveAssemblyReference.cache
 E:\github\arpggame\LayaAir\layabase\layabase\obj\Debug\layabase.csproj.CoreCompileInputs.cache
 E:\github\arpggame\LayaAir\layabase\layabase\obj\Debug\layabase.dll
 E:\github\arpggame\LayaAir\layabase\layabase\obj\Debug\layabase.pdb
+E:\github\arpggame\LayaAir\layabase\layabase\obj\Debug\layabase.csprojResolveAssemblyReference.cache

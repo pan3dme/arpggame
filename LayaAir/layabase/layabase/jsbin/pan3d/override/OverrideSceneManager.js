@@ -29,6 +29,9 @@ var pan3d;
                 ParticleManager.getInstance().updateTime();
                 SkillManager.getInstance().update();
                 if (this.render) {
+                    Scene_data.context3D.cullFaceBack(false);
+                    Scene_data.context3D.cullFaceBack(true);
+                    Scene_data.context3D.cullFaceBack(true);
                     Scene_data.context3D.setWriteDepth(true);
                     Scene_data.context3D.setDepthTest(true);
                     this.updateStaticDiplay();
@@ -36,7 +39,7 @@ var pan3d;
                     this.updateMovieDisplay();
                     Scene_data.context3D.setWriteDepth(false);
                     ParticleManager.getInstance().update();
-                    BloodManager.getInstance().update();
+                    //    BloodManager.getInstance().update();
                     Scene_data.context3D.setBlendParticleFactors(0);
                     Scene_data.context3D.setWriteDepth(true);
                 }

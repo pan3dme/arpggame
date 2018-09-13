@@ -2,7 +2,7 @@ var TimeUtil = /** @class */ (function () {
     function TimeUtil() {
     }
     TimeUtil.getTimer = function () {
-        return Date.now() - TimeUtil.START_TIME;
+        return Math.floor((Date.now() - TimeUtil.START_TIME) / 1);
     };
     TimeUtil.getTimerSecond = function () {
         return TimeUtil.getTimer() / 1000;

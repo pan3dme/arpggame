@@ -96,7 +96,7 @@ class myShaderSprite extends Laya.Sprite {
     public customRender(context: Laya.RenderContext, x: number, y: number): void {
         (context.ctx as Laya.WebGLContext2D).setIBVB(x, y, (this.iBuffer) as Laya.IndexBuffer2D, (this.vBuffer) as Laya.VertexBuffer2D, this.iNum, null, myShader.shader, this.shaderValue, 0, 0);
 
-        var $temp: boolean = false
+        var $temp: boolean = true
         if ($temp) {
             if (pan2d.Scene2dInit.isConfig) {
                 Engine.update()
@@ -107,12 +107,13 @@ class myShaderSprite extends Laya.Sprite {
         } else {
             if (pan3d.Scene3dInit.isConfig) {
                 Engine.update()
+                GameMouseManager.getInstance().addMouseEvent()
             } else {
                 pan3d.Scene3dInit.initData()
              
             }
         }
-        this.addMainUi();
+      //  this.addMainUi();
     }
     private mainUiPanel: panui.MainUiPanle
     private addMainUi(): void {
@@ -120,11 +121,8 @@ class myShaderSprite extends Laya.Sprite {
         if (!this.mainUiPanel) {
             this.mainUiPanel = new panui.MainUiPanle();
             UIManager.getInstance().addUIContainer(this.mainUiPanel);
-
-            GameMouseManager.getInstance().addMouseEvent()
-        } else {
-            console.log(main.canvas.width/960, main.canvas.height/540)
-        }
+      
+        } 
 
     }
 

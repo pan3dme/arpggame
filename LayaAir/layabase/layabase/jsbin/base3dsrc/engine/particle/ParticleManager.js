@@ -94,7 +94,7 @@ var ParticleManager = /** @class */ (function (_super) {
     });
     ParticleManager.prototype.updateTime = function () {
         var _tempTime = TimeUtil.getTimer();
-        var t = _tempTime - this._time;
+        var t = (_tempTime - this._time) / 1;
         for (var i = 0; i < this._particleList.length; i++) {
             if (!this._particleList[i].sceneVisible) {
                 continue;

@@ -1,0 +1,7 @@
+E:\github\arpggame\LayaAir\layauitest\layauitest\bin\layauitest.dll.config
+E:\github\arpggame\LayaAir\layauitest\layauitest\bin\layauitest.dll
+E:\github\arpggame\LayaAir\layauitest\layauitest\bin\layauitest.pdb
+E:\github\arpggame\LayaAir\layauitest\layauitest\obj\Debug\layauitest.csproj.CoreCompileInputs.cache
+E:\github\arpggame\LayaAir\layauitest\layauitest\obj\Debug\layauitest.dll
+E:\github\arpggame\LayaAir\layauitest\layauitest\obj\Debug\layauitest.pdb
+E:\github\arpggame\LayaAir\layauitest\layauitest\obj\Debug\layauitest.csprojResolveAssemblyReference.cache

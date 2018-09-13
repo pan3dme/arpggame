@@ -1,6 +1,0 @@
-C:\wamp\www\work\LayaAir\layabase\layabase\bin\layabase.dll.config
-C:\wamp\www\work\LayaAir\layabase\layabase\bin\layabase.dll
-C:\wamp\www\work\LayaAir\layabase\layabase\bin\layabase.pdb
-C:\wamp\www\work\LayaAir\layabase\layabase\obj\Debug\layabase.csproj.CoreCompileInputs.cache
-C:\wamp\www\work\LayaAir\layabase\layabase\obj\Debug\layabase.dll
-C:\wamp\www\work\LayaAir\layabase\layabase\obj\Debug\layabase.pdb

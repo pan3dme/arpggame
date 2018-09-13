@@ -8,11 +8,10 @@
     <meta name="format-detection" content="telephone=no">
     <meta content="IE=11.00" http-equiv="X-UA-Compatible" />
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=0.5, maximum-scale=0.5">
-
     <link rel="apple-touch-icon-precomposed" href="icon.png" />
     <link rel="touch-icon-precomposed" href="icon.png" />
-
     <style>
+
         canvas {
             position: absolute;
             top: 0px;
@@ -20,18 +19,913 @@
         }
     </style>
 
-    <script src="../../h5web.js"></script>
+    <script src="jsbin/src/base3dsrc/libs/logoload.js"></script>
+    <script src="jsbin/src/base3dsrc/libs/inflate.min.js"></script>
+    <script src="jsbin/src/base3dsrc/libs/gameversion.js"></script>
+    <script src="jsbin/src/base3dsrc/libs/base64.js"></script>
+    <script src="jsbin/src/base3dsrc/libs/md5.js"></script>
+    <script src="jsbin/src/base3dsrc/libs/TweenLite.min.js"></script>
+    <script src="jsbin/src/base3dsrc/libs/patrol/astar.js"></script>
 
 
 
-    <script src="jsbin/modules/SkillSceneChar.js"></script>
-    <script src="jsbin/modules/SkillMouseEventModel.js"></script>
-    <script src="jsbin/modules/SkillMouseManager.js"></script>
-    <script src="jsbin/modules/TpSceneProcessor.js"></script>
-    <script src="jsbin/modules/TpModuleList.js"></script>
-    <script src="jsbin/TpGame.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/events/Event.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/events/EventDispatcher.js"></script>
+
+    <script src="jsbin/src/base3dsrc/engine/base/GC.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/base/ResCount.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/base/ResGC.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/base/Object3D.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/base/Camera3D.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/base/ObjData.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/base/MeshData.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/base/Dictionary.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/base/ColorType.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/base/BitMapData.js"></script>
 
 
+
+    <script src="jsbin/src/base3dsrc/engine/context/Context3D.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/context/Scene_data.js"></script>
+
+
+
+    <script src="jsbin/src/base3dsrc/engine/display3D/Display3D.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/display3D/Display3DSprite.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/display3D/Display3DSky.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/display3D/Display3dMovie.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/display3D/Display3dBatchMovie.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/display3D/Display3dShadow.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/display3D/Display3dBg.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/display3D/Display2dMovie.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/display3D/Display3DUISprite.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/display3D/Display2DSprite.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/display3D/Display2DSprite.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/display3D/terrain/TerrainDisplay3DSprite.js"></script>
+
+    <script src="jsbin/src/base3dsrc/engine/Engine.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/math/MathClass.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/math/MathUtil.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/math/Matrix3D.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/math/Quaternion.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/math/Vector3D.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/math/Vector2D.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/math/Rectangle.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/math/Circle.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/math/Groundposition.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/math/Calculation.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/math/ByteArray.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/math/TestTriangle.js"></script>
+
+
+
+    <script src="jsbin/src/base3dsrc/engine/program/ProgramManager.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/program/Shader3D.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/program/BuildShader.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/program/MaterialShader.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/program/MaterialAnimShader.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/program/MaterialBatchAnimShader.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/program/SkyShader.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/program/Display3DShadowShader.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/program/UIShader.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/program/UIImageShager.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/program/UIMaskShader.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/program/Movie2DShader.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/program/Sprite2DShader.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/program/TerrainDisplay3DShader.js"></script>
+
+    <script src="jsbin/src/base3dsrc/engine/particle/CombineParticleData.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/particle/CombineParticle.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/particle/ParticleManager.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/particle/Display3DParticle.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/particle/ParticleData.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/particle/ParticleGpuData.js"></script>
+
+    <script src="jsbin/src/base3dsrc/engine/particle/facet/Display3DFacetParticle.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/particle/facet/Display3DFacetShader.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/particle/facet/ParticleFacetData.js"></script>
+
+    <script src="jsbin/src/base3dsrc/engine/particle/ball/Display3DBallPartilce.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/particle/ball/Display3DBallShader.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/particle/ball/ParticleBallData.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/particle/ball/ParticleBallGpuData.js"></script>
+
+    <script src="jsbin/src/base3dsrc/engine/display3D/BaseDiplay3dSprite.js"></script>
+
+    <script src="jsbin/src/base3dsrc/engine/particle/locus/Display3DLocusPartilce.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/particle/locus/Display3DLocusShader.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/particle/locus/ParticleLocusData.js"></script>
+
+    <script src="jsbin/src/base3dsrc/engine/particle/locusball/Display3DLocusBallPartilce.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/particle/locusball/ParticleLocusballData.js"></script>
+
+    <script src="jsbin/src/base3dsrc/engine/particle/model/Display3DModelPartilce.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/particle/model/Display3DModelObjParticle.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/particle/model/Display3dModelAnimParticle.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/particle/model/ParticleModelData.js"></script>
+
+    <script src="jsbin/src/base3dsrc/engine/particle/follow/Display3DFollowPartilce.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/particle/follow/Display3DFollowShader.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/particle/follow/ParticleFollowData.js"></script>
+
+    <script src="jsbin/src/base3dsrc/engine/particle/followlocus/Display3DFollowLocusPartilce.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/particle/followlocus/Display3DFollowLocusShader.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/particle/followlocus/ParticleFollowLocusData.js"></script>
+
+
+    <script src="jsbin/src/base3dsrc/engine/particle/bone/Display3DBonePartilce.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/particle/bone/ParticleBoneData.js"></script>
+
+
+    <script src="jsbin/src/base3dsrc/engine/particle/ctrl/KeyFrame.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/particle/ctrl/TimeLineData.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/particle/ctrl/TimeLine.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/particle/ctrl/BaseAnim.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/particle/ctrl/AxisMove.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/particle/ctrl/AxisRotaion.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/particle/ctrl/ScaleAnim.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/particle/ctrl/ScaleChange.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/particle/ctrl/ScaleNoise.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/particle/ctrl/SelfRotation.js"></script>
+
+    <script src="jsbin/src/base3dsrc/engine/ui/base/InteractiveEvent.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/ui/base/TextAlign.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/ui/base/UIAtlas.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/ui/base/UIRectangle.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/ui/base/UIGridRectangle.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/ui/base/UICompenent.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/ui/base/UIContainer.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/ui/base/UIVirtualContainer.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/ui/base/UIData.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/ui/base/UIRenderComponent.js"></script>
+
+    <script src="jsbin/src/base3dsrc/engine/ui/base/UIListRenderComponent.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/ui/base/UIBackImg.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/ui/base/UIMask.js"></script>
+
+
+
+
+    <script src="jsbin/src/base3dsrc/engine/ui/compenent/BaseButton.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/ui/compenent/Button.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/ui/compenent/SelectButton.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/ui/compenent/Grid9Compenent.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/ui/compenent/FrameCompenent.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/ui/compenent/List.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/ui/compenent/SList.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/ui/compenent/GridList.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/ui/compenent/CdUICompenent.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/ui/compenent/Dis2DUIContianerPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/ui/compenent/AlphaUiContianer.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/ui/compenent/RoationUiContianer.js"></script>
+
+    <script src="jsbin/src/base3dsrc/engine/ui/base/FrameUIRender.js"></script>
+
+    <script src="jsbin/src/base3dsrc/engine/ui/IconManager.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/ui/UIManager.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/ui/UILoading.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/ui/UIStage.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/ui/PuiData.js"></script>
+
+
+
+
+
+    <script src="jsbin/src/base3dsrc/engine/material/TextureRes.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/material/TextureManager.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/material/ConstItem.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/material/TexItem.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/material/Material.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/material/MaterialManager.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/material/DynamicBaseConstItem.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/material/DynamicBaseTexItem.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/material/MaterialBaseParam.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/material/MaterialParam.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/material/DynamicConstItem.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/material/DynamicTexItem.js"></script>
+
+    <script src="jsbin/src/base3dsrc/engine/scene/tree/QuadTreeNode.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/scene/tree/SceneQuadTree.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/scene/ViewFrustum.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/scene/SceneManager.js"></script>
+
+    <script src="jsbin/src/base3dsrc/engine/skill/SkillManager.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/skill/Skill.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/skill/SkillData.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/skill/vo/SkillVo.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/skill/vo/SkillKeyVo.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/skill/key/SkillKey.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/skill/key/SkillEffect.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/skill/key/SkillFixEffect.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/skill/key/SkillTrajectory.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/skill/key/SkillMulTrajectory.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/skill/path/SkillPath.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/skill/path/SkillSinPath.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/skill/path/SkillMulPath.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/skill/path/PathManager.js"></script>
+
+
+    <script src="jsbin/src/base3dsrc/engine/utils/LoadManager.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/utils/ObjDataManager.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/utils/MeshDataManager.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/utils/AnimManager.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/utils/LightProbeManager.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/utils/GroupDataManager.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/utils/AstarUtil.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/utils/KeyboardType.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/utils/KeyControl.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/utils/TimeUtil.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/utils/Util.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/utils/ColorTransition.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/utils/ArtFont.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/utils/LabelTextFont.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/utils/SoundManager.js"></script>
+
+    <script src="jsbin/src/base3dsrc/engine/utils/BloodManager.js"></script>
+
+    <script src="jsbin/src/base3dsrc/engine/utils/curves/Curve.js"></script>
+
+    <script src="jsbin/src/base3dsrc/engine/utils/shadow/Shadow.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/utils/shadow/ShadowManager.js"></script>
+
+    <script src="jsbin/src/base3dsrc/engine/utils/res/BaseRes.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/utils/res/ResManager.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/utils/res/RoleRes.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/utils/res/SkillRes.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/utils/res/ModelRes.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/utils/res/GroupRes.js"></script>
+
+    <script src="jsbin/src/base3dsrc/engine/scene/SceneRes.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/scene/SceneResLow.js"></script>
+
+    <script src="jsbin/src/base3dsrc/engine/net/obj/NetEventDispatcher.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/net/obj/UpdateMask.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/net/obj/StringIndexer.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/net/obj/SyncEvent.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/net/obj/BinLogStru.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/net/obj/SyncEventRecorder.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/net/obj/GuidObject.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/net/obj/GuidObjectTable.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/net/obj/SyncEventFilter.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/net/obj/SyncEventFilter.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/net/obj/ObjectDef.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/net/script/clientmsg.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/net/script/Protocols.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/net/script/clientstru.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/net/script/OprateResult.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/net/script/SharedDef.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/net/script/OperationInfo.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/net/NetManager.js"></script>
+
+
+    <script src="jsbin/src/base3dsrc/engine/vo/skinanim/AnimData.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/vo/skinanim/SkinMesh.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/vo/skinanim/BoneSocketData.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/vo/collistion/CollisionVo.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/vo/collistion/CapsuleVo.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/vo/LightVo.js"></script>
+
+
+    <script src="jsbin/src/base3dsrc/engine/scene/grldLevel/LineDisplayShader.js"></script>
+    <script src="jsbin/src/base3dsrc/engine/scene/grldLevel/LineDisplaySprite.js"></script>
+
+    <script src="jsbin/src/base3dsrc/engine/FpsStage.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mvcframe/Module.js"></script>
+    <script src="jsbin/src/base3dsrc/mvcframe/ModuleEventManager.js"></script>
+    <script src="jsbin/src/base3dsrc/mvcframe/Processor.js"></script>
+
+
+
+
+
+
+
+
+    <script src="jsbin/src/base3dsrc/mmogame/vo/MeshVo.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mmogame/common/base/CharAction.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/common/base/UIPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/common/base/BaseProcessor.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/common/base/SceneBaseChar.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/common/base/ScenePerfab.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mmogame/common/msg/event/testui/TestUIEvent.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/common/msg/event/equipment/EquipmentEvent.js"></script>
+
+
+    <script src="jsbin/src/base3dsrc/mmogame/common/utils/engine/SceneChar.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/common/utils/engine/MainCharControlModel.js"></script>
+
+
+    <script src="jsbin/src/base3dsrc/mmogame/common/utils/engine/WarningEffectChar.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/common/utils/engine/MountChar.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/common/utils/engine/SceneBaseCollection.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/common/utils/engine/ScenePortal.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/common/utils/engine/SceneLoot.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/common/utils/engine/SceneCollection.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/common/utils/engine/Unit.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/common/utils/engine/Loot.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/common/utils/GameUtils.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/common/utils/GamePay.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/common/utils/RedPointManager.js"></script>
+
+
+    <script src="jsbin/src/base3dsrc/mmogame/common/utils/engine/PlayerGuidObject.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/common/utils/engine/PersonChar.js"></script>
+
+
+    <script src="jsbin/src/base3dsrc/mmogame/common/InputPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/common/AlertUtil.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/common/GameData.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/common/GameInstance.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mmogame/manager/TableData.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/manager/GameControlManager.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/manager/KeyControlManager.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/manager/GuidObjManager.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/manager/GuidData.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/manager/RelationManager.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/manager/SceneCharManager.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/manager/FightManager.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/manager/DamageShowManage.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/manager/shareguid/GrowData.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/manager/shareguid/TeamData.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/manager/shareguid/GiftPacksData.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mmogame/manager/shareguid/InstanceData.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/manager/shareguid/SocialData.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/manager/shareguid/FactionData.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/manager/shareguid/GlobelValueData.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/manager/shareguid/RankData.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/manager/shareguid/QuestData.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/_engine/EngineModule.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/_engine/EngineProcessor.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/_engine/EngineEvent.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/_engine/NetBaseProcessor.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/public/DeathPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/public/PopMenuUtil.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/public/PopNewPromptUtil.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/public/PopTimeOutUtil.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/public/MenuKeyUtil.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/public/DataSlist.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/window/WindowUi.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/window/WindowCentenMin.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/window/WindowMinUi.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/window/WindowPopUi.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/window/WindowRestTittlePanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/window/WindowRankPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/window/WindowResPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/window/WindowRestTittleProcessor.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/window/popbuy/PopVipBuyPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/window/popbuy/PopBuyPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/window/popbuy/PopBuyprocessor.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/window/popwin/PopWindowMin.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/window/linklist/LinkListPanel.js"></script>
+
+
+
+
+
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/login/LoginNewPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/login/LoginProcessor.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/login/LoginEvent.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/login/LoginModule.js"></script>
+
+
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/sceneLoad/SceneLoadUI.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/sceneLoad/SceneTransitionUI.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/sceneLoad/SceneLoadProcessor.js"></script>
+
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/msgtip/GuideModel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/msgtip/MsgZhanliInfoPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/msgtip/MsgZhanliPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/msgtip/SystemOpenPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/msgtip/SystemOpenShow.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/msgtip/MsgEquMoveToBag.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/msgtip/MsgSkillTipPanel.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/msgtip/MsgEffectsIcon.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/msgtip/MsgTipManager.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/msgtip/MsgTopCenterPic.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/msgtip/MsgTipProcessor.js"></script>
+
+
+
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/quest/view/QuestDailyPanel.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/quest/QuestModel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/quest/QuestProcessor.js"></script>
+
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/mainui/fight/FightSkillPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/mainui/fight/FightUiPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/mainui/fight/FightUiProcessor.js"></script>
+
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/mainui/home/HomeSysPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/mainui/home/HomeUiPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/mainui/home/HomeUiProcessor.js"></script>
+
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/mainui/top/TopUiBuffPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/mainui/top/TopHeadPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/mainui/top/TopPandaPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/mainui/top/TopUiPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/mainui/top/TopUiProcessor.js"></script>
+
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/mainui/bootom/BottomProgressBar.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/mainui/bootom/BottomUiLeftPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/mainui/bootom/BottomUiChatPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/mainui/bootom/BottomUiPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/mainui/bootom/BottomAotuScaleText.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/mainui/bootom/BottomUiProcessor.js"></script>
+
+
+
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/mainui/left/hangup/LeftHangUpBaseVo.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/mainui/left/hangup/LeftHangUpBossVo.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/mainui/left/hangup/LeftHangUpPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/mainui/left/family/LeftFamilyUiVo.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/mainui/left/family/FamilyLinPai.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/mainui/left/family/FamilyBoss.js"></script>
+
+
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/mainui/left/group/LeftGropPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/mainui/left/family/LeftFamilyUiPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/mainui/left/quest/LeftUiQuestPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/mainui/left/LeftUiPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/mainui/left/LeftUiProcessor.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/mainui/right/RightUiPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/mainui/right/RightUiProcessor.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/mainui/AotuSkillManager.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/mainui/MainUiModel.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/mainui/MainUIProcessor.js"></script>
+
+
+
+
+
+
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/chat/baseView/ChatBaseLeftMenu.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/chat/baseView/ChatBaseMenu.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/chat/baseView/ChatBasePanel.js"></script>
+
+
+
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/chat/view/ChatListContextComponent.js"></script>
+
+
+
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/chat/FaceFontLabel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/chat/ChatModel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/chat/EmailModel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/chat/ChatProcessor.js"></script>
+
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/chat/horn/HornUiPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/chat/horn/HornUiProcessor.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/chat/face/FaceUiPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/chat/face/FaceUiProcessor.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/chat/seting/SetingUiPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/chat/seting/SetingUiProcessor.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/chat/shield/ShieldUiPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/chat/shield/ShieldUiProcessor.js"></script>
+
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/chat/whisper/whisperChatListPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/chat/whisper/whisperUiPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/chat/whisper/whisperUiProcessor.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/command/CammandPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/command/CommandProcessor.js"></script>
+
+
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/scene/SceneProcessor.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/scene/MapInfo.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/strength/StrengGuidObject.js"></script>
+
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/skillUi/SkillPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/skillUi/SkillModel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/skillUi/SkillProcessor.js"></script>
+
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/charbg/info/CharInfoPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/charbg/vip/VipPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/charbg/bg/BagPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/charbg/bg/BagData.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/charbg/bg/BaseTip.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/charbg/bg/EquTip.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/charbg/bg/EquItemTip.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/charbg/bg/ItemTip.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/charbg/bg/SkillTip.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/charbg/bg/GoodsTip.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/charbg/bg/SmeltEquPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/charbg/bg/SmeltEquSelPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/charbg/CharBgPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/charbg/CharBgProcessor.js"></script>
+
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/fuben/exp/view/ExpTaskPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/fuben/exp/ExpUiPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/fuben/exp/ExpProcessor.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/fuben/left/FubenLeftPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/fuben/left/FubenLeftTeamPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/fuben/left/FubenLeftFactionPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/fuben/left/FubenLeftBossPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/fuben/right/FubenRightPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/fuben/reward/FubenRewardPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/fuben/reward/FubenFailPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/fuben/FuBenModel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/fuben/FubenProcessor.js"></script>
+
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/reward/RewardPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/reward/RewardProcessor.js"></script>
+
+
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/mountui/MountProcessor.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/mountui/newModule/NewMountModel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/mountui/newModule/NewMountUiPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/mountui/newModule/UnActivationUiPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/mountui/newModule/MountUpOrder.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/mountui/newModule/MountUpLev.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/mountui/newModule/MountSkill.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/mountui/newModule/MountHuanhua.js"></script>
+
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/copytask/waitjoin/waitjoinPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/copytask/view/TeamcopyUiPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/copytask/view/ResCopyTaskPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/copytask/view/TowerCopyTaskPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/copytask/CopytaskUiPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/copytask/CopytaskModel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/copytask/CopytaskProcessor.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/treasure/view/TreasureWear.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/treasure/view/TreasurePage.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/treasure/view/TreasureRightPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/treasure/view/TreasureTip.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/treasure/TreasureUiPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/treasure/TreasureModel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/treasure/TreasureProcessor.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/strength/StrengthGemProcessor.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/strength/tips/PopLevTipsPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/strength/tips/masterLevtipsPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/strength/tips/refiningtipsPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/strength/view/StrengTab3.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/strength/view/StrengTab2.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/strength/view/StrengTab1.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/strength/view/StrengTab0.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/strength/NewStrengModel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/strength/NewStrengUiPanel.js"></script>
+
+
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/hangup/HangupSettingUiPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/hangup/HangupSettingModel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/hangup/HangupSettingProcessor.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/social/view/ApplyList.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/social/view/ApplyPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/social/view/AddFriendList.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/social/view/AddFriendPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/social/view/SocialListPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/social/SocialUiPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/social/SocialModel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/social/SocialProcessor.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/faction/league/gz/LeagueLs.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/faction/league/gz/LeagueGz.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/faction/league/FactionLeagueList.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/faction/league/FactionLeagueModel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/faction/league/FactionLeagueProcessor.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/faction/league/FactionLeagueUiPanel.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/faction/view/ApplyFactionList.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/faction/view/PersonListPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/faction/view/ApplyZhaoMuListPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/faction/view/ApplyBuildPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/faction/view/ApplyZhaomuPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/faction/view/FactionPersonPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/faction/view/FactionFunctionPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/faction/pop/RecruitingPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/faction/pop/NoticePanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/faction/pop/AppointmentPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/faction/factionactive/FactionActivePanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/faction/factionactive/FactionLeaderPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/faction/factionactive/FactionTripPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/faction/factionskill/FactionSkillPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/faction/ApplyFactionUiPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/faction/ExistFactionUiPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/faction/FactionProcessor.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/faction/FactionModel.js"></script>
+
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/faction/factionBoss/FactionBossProcessor.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/faction/factionBoss/FactionBossUiPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/faction/factionBoss/FactionBossList.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/faction/factionBoss/FactionBossModel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/faction/factionBoss/FactionBossEnd.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/faction/factionBuild/FactionBuildList.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/faction/factionBuild/FactionBuildModel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/faction/factionBuild/FactionBuildProcessor.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/faction/factionBuild/FactionBuildUiPanel.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/faction/warehousetreasure/duihuan/DuiHuanPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/faction/warehousetreasure/duihuan/DuiHuanprocessor.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/faction/warehousetreasure/donation/DonationPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/faction/warehousetreasure/donation/DonationProcessor.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/faction/warehousetreasure/turnonwarehouse/TurnonWarehouseList.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/faction/warehousetreasure/turnonwarehouse/TurnonWarehousePanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/faction/warehousetreasure/turnonwarehouse/TurnonWarehouseProcessor.js"></script>
+
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/faction/warehousetreasure/view/warehouse/WarehouseList.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/faction/warehousetreasure/view/warehouse/WarehousePanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/faction/warehousetreasure/view/treasure/TreasurePanel.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/faction/warehousetreasure/WarehouseTreasureLogList.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/faction/warehousetreasure/WarehouseTreasurePanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/faction/warehousetreasure/WarehouseTreasureProcessor.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/faction/invitation/invitationPanel.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/faction/factionhonor/FactionHonorPanel.js"></script>
+
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/ranking/view/RankReward.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/ranking/view/CurrentServerRankingList.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/ranking/view/CurrentServerRanking.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/ranking/RankingUiPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/ranking/RankingProcessor.js"></script>
+
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/role/pop/changenamePanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/role/view/DesignationPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/role/view/AttributeUiPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/role/view/AchievementPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/role/RoleModel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/role/RoleProcessor.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/role/RoleUiPanel.js"></script>
+
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/boss/BossProcessor.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/boss/BossHpPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/boss/BossRankPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/boss/BossViewPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/boss/BossModel.js"></script>
+
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/boss/sboss/pop/BossInfoPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/boss/sboss/pop/BossGz.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/boss/sboss/view/PersonBossPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/boss/sboss/view/SmassBossPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/boss/sboss/view/WbossPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/boss/sboss/view/WbossRewardPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/boss/sboss/SbossModel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/boss/sboss/SbossPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/boss/sboss/SbossProcessor.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/mail/MailPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/mail/MailProcessor.js"></script>
+
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/map/view/MapWalkLineComponent.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/map/view/MapCetentPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/map/view/MapLeftPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/map/view/MapRightPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/map/view/MapLinePanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/map/MapModel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/map/MapPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/map/MapProcessor.js"></script>
+
+
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/mapnew/MiniMap.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/mapnew/WorldMap.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/mapnew/MapUiPanel.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/mapnew/MapNewProcessor.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/openpass/pop/BossUiPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/openpass/pop/BoxRewardPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/openpass/PassModel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/openpass/PassProcessor.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/openpass/PassUiPanel.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/team/view/InviResquestPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/team/view/InvitationTeam.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/team/view/ApplyPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/team/view/ConvenientTeam.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/team/view/TeamSurePanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/team/view/ChgTeamType.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/team/TeamModel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/team/TeamProcessor.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/team/TeamUiPanel.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/mainui/minmap/MinMapImg.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/mainui/minmap/MinMapPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/mainui/minmap/MinMapProcessor.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/dialogue/DialoguePanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/dialogue/DialogueProcessor.js"></script>
+
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/kuafu/3v3/Kuafu3V3FinishPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/kuafu/3v3/KuaFu3v3EndPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/kuafu/3v3/KuaFu3v3PkTopPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/kuafu/3v3/KuaFu3v3Model.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/kuafu/3v3/KuaFu3v3PkPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/kuafu/3v3/KuaFu3v3MatchTimePanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/kuafu/3v3/KuaFu3v3MatchListPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/kuafu/3v3/KuaFu3v3PkProcessor.js"></script>
+
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/kuafu/1v1/Kuafu1v1SceneTopPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/kuafu/1v1/KuaFu1v1Model.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/kuafu/1v1/KuaFu1v1Processor.js"></script>
+
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/kuafu/arena/ArenaPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/kuafu/arena/ArenaDjPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/kuafu/arena/ArenaDjRewardPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/kuafu/arena/Arena3V3Panel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/kuafu/arena/ArenaQualifying.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/kuafu/KuaFuProcessor.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/activity/view/EverydayActivityList.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/activity/ActivityModel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/activity/ActivityUiPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/activity/ActivityProcessor.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/store/view/ShopList.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/store/view/Shop.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/store/view/RechargePanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/store/view/ShopMallPanelTabList.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/store/StoreModel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/store/StoreUiPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/store/StoreProcessor.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/refill/PopPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/refill/RefillUiPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/refill/RefillProcessor.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/welfare/view/WelfareExchange.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/welfare/view/WelfareSevenDay.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/welfare/view/WelfareCost.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/welfare/view/WelfareRefill.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/welfare/view/WelfareRecharge.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/welfare/view/WelfareLevel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/welfare/view/WelfareEveryCheckin.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/welfare/WelfareUiPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/welfare/LotteryPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/welfare/WelfareProcessor.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/stronger/view/StrongerList.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/stronger/view/StrongerTabList.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/stronger/StrongerModel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/stronger/StrongerUiPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/stronger/StrongerProcessor.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/stateup/pop/StateupGz.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/stateup/pop/StateupPopPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/stateup/StateUpModel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/stateup/StateUpProcessor.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/stateup/StateUpUiPanel.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/training/view/TrainingSkill.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/training/view/TrainingTask.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/training/TrainingModel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/training/TrainingUiPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/training/TrainingProcessor.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/divinesword/view/DivineswordSkill.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/divinesword/view/DivineswordTask.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/divinesword/DivineswordUiPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/divinesword/DivineswordProcessor.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/Logingift/LogingiftModel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/Logingift/LogingiftUiPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/Logingift/LogingiftProcessor.js"></script>
+
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/adventure/AdventureModel.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/adventure/adventuremap/MapWorldPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/adventure/adventuremap/AdventureMapPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/adventure/adventuremap/AdventureMapProcessor.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/adventure/adventuremap/WorldAdventureUiPanel.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/adventure/adventureinfo/UplevfoPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/adventure/adventureinfo/AdventureInfoPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/adventure/adventureinfo/AdventureInfoProcessor.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/adventure/adventuresettlement/AdventureSettlementPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/adventure/adventuresettlement/AdventureSettlementProcessor.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/adventure/offlinereward/OfflineRewardPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/adventure/offlinereward/OfflineRewardProcessor.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/adventure/adventurebang/AdventureBangPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/adventure/adventurebang/AdventureBangProcessor.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/adventure/adventurebossnotice/AdventureBossNoticePanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/adventure/adventurebossnotice/AdventureBossNoticeProcessor.js"></script>
+
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/newbieguide/UseItemPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/newbieguide/Systemtrailer.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/newbieguide/Newbieguide.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/newbieguide/OptionalGuidePop.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/newbieguide/NewbieguideProcessor.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/wing/WingPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/wing/WingProcessor.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/meridian/buy/MeridianBuyPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/meridian/MeridianPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/meridian/MeridianProcessor.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/exterior/identification/IdentificationPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/exterior/ExteriorPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/exterior/ExteriorProcessor.js"></script>
+
+
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/command/gift/GiftModel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/command/gift/GiftPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/command/gift/GiftProcessor.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/kaifu/view/KaifuBaseContainer.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/kaifu/view/KaifuChoujiangPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/kaifu/view/KaifuDayTargetPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/kaifu/view/KaifuRewardPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/kaifu/view/KaifuVIPRewardPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/kaifu/KaiFuActivePanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/kaifu/KaiFuProcessor.js"></script>
+
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/moneytree/MoneyTreeModel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/moneytree/MoneyTree.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/moneytree/MoneyTreeProcessor.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/chgfish/ChgfishModel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/chgfish/ChgfishUiPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/chgfish/ChgfishProcessor.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/selectserver/joingame/JoinGameUiPanel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/selectserver/view/xuanfuList.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/selectserver/view/Ssxuanfu.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/selectserver/view/Ssgonggao.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/selectserver/SelectServerModel.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/selectserver/SelectServerProcessor.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/selectserver/SelectServerUiPanel.js"></script>
+
+
+    <script src="jsbin/src/base3dsrc/mmogame/modules/ModuleList.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/modules/ModulePageManager.js"></script>
+
+    <script src="jsbin/src/base3dsrc/mmogame/GameMouseManager.js"></script>
+    <script src="jsbin/src/base3dsrc/mmogame/GameStart.js"></script>
+
+
+    <script src="jsbin/tp/modules/SkillSceneChar.js"></script>
+    <script src="jsbin/tp/modules/SkillMouseEventModel.js"></script>
+    <script src="jsbin/tp/modules/SkillMouseManager.js"></script>
+    <script src="jsbin/tp/modules/TpSceneProcessor.js"></script>
+    <script src="jsbin/tp/modules/TpModuleList.js"></script>
+    <script src="jsbin/tp/TpGame.js"></script>
 
     <script>
 

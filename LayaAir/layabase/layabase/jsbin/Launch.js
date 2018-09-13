@@ -111,19 +111,24 @@ var Launch = /** @class */ (function () {
         Laya.stage.mouseThrough = true;
         // 监听窗口大小变化
         Laya.stage.on(LEvent.RESIZE, this, this.onResize);
-        var $imag = new Laya.Image('res/ui/blood.png');
-        $imag.pos(500, 400);
-        $imag.pos(500, 500);
+        /*
+        var $imag: Laya.Image = new Laya.Image('res/ui/blood.png')
+        $imag.pos(500, 400)
+        $imag.pos(500, 500)
         Laya.stage.addChild($imag);
-        var $imag = new Laya.Image('res/ui/logo.png');
-        $imag.pos(100, 500);
+
+        var $imag: Laya.Image = new Laya.Image('res/ui/logo.png')
+        $imag.pos(100, 500)
         Laya.stage.addChild($imag);
-        var $imag = new Laya.Image('res/ui/logo.png');
-        $imag.pos(300, 500);
+
+        var $imag: Laya.Image = new Laya.Image('res/ui/logo.png')
+        $imag.pos(300, 500)
         Laya.stage.addChild($imag);
-        var $imag = new Laya.Image('res/ui/logo.png');
-        $imag.pos(600, 500);
+
+        var $imag: Laya.Image = new Laya.Image('res/ui/logo.png')
+        $imag.pos(600, 500)
         Laya.stage.addChild($imag);
+        */
         this.onResize();
         Laya.loader.load("res/ui/logo.png", Laya.Handler.create(this, this.loadComplete));
     };

@@ -95,6 +95,7 @@ class Launch {
         // 监听窗口大小变化
         Laya.stage.on(LEvent.RESIZE, this, this.onResize);
 
+        /*
         var $imag: Laya.Image = new Laya.Image('res/ui/blood.png')
         $imag.pos(500, 400)
         $imag.pos(500, 500)
@@ -111,7 +112,7 @@ class Launch {
         var $imag: Laya.Image = new Laya.Image('res/ui/logo.png')
         $imag.pos(600, 500)
         Laya.stage.addChild($imag);
-
+        */
         this.onResize();
         Laya.loader.load("res/ui/logo.png", Laya.Handler.create(this, this.loadComplete));
     }

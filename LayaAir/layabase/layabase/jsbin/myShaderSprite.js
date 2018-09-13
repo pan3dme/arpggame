@@ -107,7 +107,7 @@ var myShaderSprite = /** @class */ (function (_super) {
     //重写渲染函数
     myShaderSprite.prototype.customRender = function (context, x, y) {
         context.ctx.setIBVB(x, y, (this.iBuffer), (this.vBuffer), this.iNum, null, myShader.shader, this.shaderValue, 0, 0);
-        var $temp = false;
+        var $temp = true;
         if ($temp) {
             if (pan2d.Scene2dInit.isConfig) {
                 Engine.update();
@@ -119,22 +119,19 @@ var myShaderSprite = /** @class */ (function (_super) {
         else {
             if (pan3d.Scene3dInit.isConfig) {
                 Engine.update();
+                GameMouseManager.getInstance().addMouseEvent();
             }
             else {
                 pan3d.Scene3dInit.initData();
             }
         }
-        this.addMainUi();
+        //  this.addMainUi();
     };
     myShaderSprite.prototype.addMainUi = function () {
         //只加一次
         if (!this.mainUiPanel) {
             this.mainUiPanel = new panui.MainUiPanle();
             UIManager.getInstance().addUIContainer(this.mainUiPanel);
-            GameMouseManager.getInstance().addMouseEvent();
-        }
-        else {
-            console.log(main.canvas.width / 960, main.canvas.height / 540);
         }
     };
     return myShaderSprite;

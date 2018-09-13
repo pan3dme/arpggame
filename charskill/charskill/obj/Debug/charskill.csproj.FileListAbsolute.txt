@@ -11,3 +11,15 @@ F:\slefSvn\trunk\h5ts\ziph5\charskill\charskill\obj\Debug\charskill.csproj.CoreC
 F:\slefSvn\trunk\h5ts\ziph5\charskill\charskill\obj\Debug\charskill.dll
 F:\slefSvn\trunk\h5ts\ziph5\charskill\charskill\obj\Debug\charskill.pdb
 F:\slefSvn\trunk\h5ts\ziph5\charskill\charskill\obj\Debug\charskill.csprojResolveAssemblyReference.cache
+E:\github\arpggame\charskill\charskill\obj\Debug\charskill.dll
+E:\github\arpggame\charskill\charskill\obj\Debug\charskill.pdb
+E:\github\arpggame\charskill\charskill\bin\charskill.dll.config
+E:\github\arpggame\charskill\charskill\bin\charskill.dll
+E:\github\arpggame\charskill\charskill\bin\charskill.pdb
+E:\github\arpggame\charskill\charskill\obj\Debug\charskill.csproj.CoreCompileInputs.cache
+E:\github\arpggame\charskill1\charskill\bin\charskill.dll.config
+E:\github\arpggame\charskill1\charskill\bin\charskill.dll
+E:\github\arpggame\charskill1\charskill\bin\charskill.pdb
+E:\github\arpggame\charskill1\charskill\obj\Debug\charskill.csproj.CoreCompileInputs.cache
+E:\github\arpggame\charskill1\charskill\obj\Debug\charskill.dll
+E:\github\arpggame\charskill1\charskill\obj\Debug\charskill.pdb

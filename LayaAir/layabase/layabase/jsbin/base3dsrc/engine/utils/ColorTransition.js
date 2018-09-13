@@ -30,10 +30,11 @@ var ColorTransition = /** @class */ (function () {
         for (var i = 0; i < 64; i++) {
             index = i * 4;
             baseindex = float2int(i / 64 * $lenght) * 4;
-            imgData.data[index] = $data[baseindex];
-            imgData.data[index + 1] = $data[baseindex + 1];
-            imgData.data[index + 2] = $data[baseindex + 2];
+            imgData.data[index + 0] = $data[baseindex + 0] * ($data[baseindex + 3] / 0xff);
+            imgData.data[index + 1] = $data[baseindex + 1] * ($data[baseindex + 3] / 0xff);
+            imgData.data[index + 2] = $data[baseindex + 2] * ($data[baseindex + 3] / 0xff);
             imgData.data[index + 3] = $data[baseindex + 3];
+            //imgData.data[index + 3] = 0xff
         }
         return imgData;
         //Scene_data.context3D.getTexture(imgData);

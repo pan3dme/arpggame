@@ -148,9 +148,7 @@ var ParticleBallData = /** @class */ (function (_super) {
         this.initBaseData();
         this.initBasePos();
         this.initSpeed();
-        if (this._needSelfRotation) {
-            this.initSelfRotaion();
-        }
+        this.initSelfRotaion();
         if (this._needRandomColor) {
             this.initBaseColor();
         }
@@ -277,6 +275,11 @@ var ParticleBallData = /** @class */ (function (_super) {
                 v3d = ma.transformVector(v3d);
                 v3d.normalize();
                 resultv3d = resultv3d.add(v3d);
+                //这里先特殊处理，往后有空要优化。
+                if (isNaN(resultv3d.x) || isNaN(resultv3d.y) || isNaN(resultv3d.z)) {
+                    resultv3d = this._shootAngly.clone();
+                    resultv3d.normalize();
+                }
             }
             if (this._lixinForce.x != 0 || this._lixinForce.y != 0 || this._lixinForce.z != 0) {
                 v3d = new Vector3D(Math.random() > 0.5 ? -this._lixinForce.x : this._lixinForce.x, Math.random() > 0.5 ? -this._lixinForce.y : this._lixinForce.y, Math.random() > 0.5 ? -this._lixinForce.z : this._lixinForce.z);
